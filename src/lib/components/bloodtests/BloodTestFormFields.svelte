@@ -14,6 +14,7 @@
 </script>
 
 <script lang="ts">
+  import { displayMeasurement } from '$lib/bloodtest-display'
   import { i18n } from '$lib/i18n.svelte'
   import { BLOOD_MARKERS, getMarkerUnitOptions, getReferenceRangeSource } from '$lib/constants'
   import type { BloodMarker } from '$lib/types'
@@ -96,7 +97,10 @@
           <label for={marker}>
             {i18n.t('bloodtests.markers.' + marker)}
             {#if unitOptions.length === 1}
-              <span class="unit-hint">({BLOOD_MARKERS[marker].unit})</span>
+              <span class="unit-hint"
+                >({displayMeasurement(marker, 0, BLOOD_MARKERS[marker].unit, i18n.locale)
+                  .unit})</span
+              >
             {/if}
           </label>
           <div class="value-row">
@@ -118,7 +122,11 @@
                 }}
               >
                 {#each unitOptions as unit (unit)}
-                  <option value={unit}>{unit}</option>
+                  <option value={unit}
+                    >{marker === 'testosterone'
+                      ? unit
+                      : displayMeasurement(marker, 0, unit, i18n.locale).unit}</option
+                  >
                 {/each}
               </select>
             {/if}

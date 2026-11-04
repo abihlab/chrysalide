@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
   import { MEDICATION_TYPES } from '$lib/constants'
   import type { Medication } from '$lib/types'
@@ -59,7 +60,12 @@
         <div class="label-row" style:height={`${barHeight + barGap}px`}>
           <span class="dot" style:background={typeInfo.color} style:opacity={isEnded ? 0.5 : 1}
           ></span>
-          <span class="name" style:opacity={isEnded ? 0.5 : 1} title={med.name}>{med.name}</span>
+          <span
+            class="name"
+            style:opacity={isEnded ? 0.5 : 1}
+            title={catalogLabel('commonNames', med.name)}
+            >{catalogLabel('commonNames', med.name)}</span
+          >
         </div>
       {/each}
     </div>

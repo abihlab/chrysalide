@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { onMount } from 'svelte'
   import { format, subMonths, startOfMonth, endOfMonth, endOfDay } from 'date-fns'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
@@ -148,7 +149,7 @@
       >
         <option value="all">{i18n.t('medications.history.allMeds')}</option>
         {#each uniqueMedicationNames as [id, name] (id)}
-          <option value={String(id)}>{name}</option>
+          <option value={String(id)}>{catalogLabel('commonNames', name)}</option>
         {/each}
       </select>
     </div>

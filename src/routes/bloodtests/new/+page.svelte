@@ -23,6 +23,12 @@
   let markerUnits = $state<Record<BloodMarker, string>>({ ...DEFAULT_MARKER_UNITS })
 
   onMount(async () => {
+    markerUnits = Object.fromEntries(
+      Object.entries(DEFAULT_MARKER_UNITS).map(([marker, unit]) => [
+        marker,
+        marker === 'testosterone' && i18n.locale === 'pt-BR' ? 'ng/dL' : unit,
+      ])
+    ) as Record<BloodMarker, string>
     const profile = await getUserProfile()
     if (profile?.targetGender) {
       context = profile.targetGender === 'masculinizing' ? 'masculinizing' : 'feminizing'

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { formatLabNumber } from '$lib/bloodtest-display'
   import { domToPng } from 'modern-screenshot'
   import { jsPDF } from 'jspdf'
   import { format } from 'date-fns'
@@ -158,11 +159,15 @@
           pdf.text(row.label, x, y)
           x += colWidths[0]!
 
-          pdf.text(`${row.value} ${row.unit}`, x, y)
+          pdf.text(`${formatLabNumber(row.value, i18n.locale)} ${row.unit}`, x, y)
           x += colWidths[1]!
 
           if (row.targetMin !== undefined && row.targetMax !== undefined) {
-            pdf.text(`${row.targetMin} - ${row.targetMax} ${row.unit}`, x, y)
+            pdf.text(
+              `${formatLabNumber(row.targetMin, i18n.locale)} - ${formatLabNumber(row.targetMax, i18n.locale)} ${row.unit}`,
+              x,
+              y
+            )
           } else {
             pdf.text('-', x, y)
           }

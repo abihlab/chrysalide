@@ -1,12 +1,7 @@
 <script lang="ts">
   import { i18n } from '$lib/i18n.svelte'
-  import {
-    resources,
-    getResourcesByCategory,
-    searchResources,
-    type Resource,
-    type ResourceCategory,
-  } from '$lib/resources-data'
+  import type { Resource, ResourceCategory } from '$lib/resources-data'
+  import { localizedResources, searchLocalizedResources } from '$lib/catalog-labels'
   import Users from '@lucide/svelte/icons/users'
   import Stethoscope from '@lucide/svelte/icons/stethoscope'
   import Scale from '@lucide/svelte/icons/scale'
@@ -31,12 +26,14 @@
   let searchQuery = $state('')
   let selectedCategory = $state<ResourceCategory | 'all'>('all')
 
+  let catalog = $derived(localizedResources())
+
   let filteredResources = $derived(
     searchQuery
-      ? searchResources(searchQuery)
+      ? searchLocalizedResources(searchQuery, catalog)
       : selectedCategory === 'all'
-        ? resources
-        : getResourcesByCategory(selectedCategory)
+        ? catalog
+        : catalog.filter((resource) => resource.category === selectedCategory)
   )
 
   function selectCategory(cat: ResourceCategory | 'all') {
@@ -113,7 +110,7 @@
   {/if}
 {:else}
   {#each categories as category (category)}
-    {@const categoryResources = getResourcesByCategory(category)}
+    {@const categoryResources = catalog.filter((resource) => resource.category === category)}
     {#if categoryResources.length > 0}
       {@const config = categoryConfig[category]}
       <section class="category-section">
@@ -142,12 +139,12 @@
 {#snippet resourceCard(resource: Resource)}
   <a href={resource.url} target="_blank" rel="noopener noreferrer" class="card resource-card">
     <div class="resource-head">
-      <h3>{i18n.t(`resources.items.${resource.id}.name`)}</h3>
-      {#if resource.language !== 'fr'}
+      <h3>{resource.name}</h3>
+      {#if resource.language !== i18n.locale.split('-')[0]}
         <span class="lang-badge"><Globe size={11} />{resource.language.toUpperCase()}</span>
       {/if}
     </div>
-    <p class="row-desc">{i18n.t(`resources.items.${resource.id}.description`)}</p>
+    <p class="row-desc">{resource.description}</p>
     <div class="tag-row">
       {#each resource.tags.slice(0, 3) as tag (tag)}
         <span class="tag">{tag}</span>

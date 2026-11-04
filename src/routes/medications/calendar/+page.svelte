@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { onMount } from 'svelte'
   import {
     format,
@@ -236,7 +237,10 @@
           {@const medLogs = selectedDayLogs.filter((l) => l.medicationId === med.id)}
           {@const doseTimes = getMedicationReminderTimes(med)}
           {#if doseTimes.length > 1}
-            <p class="med-label">{med.name} ({med.dosage} {med.unit})</p>
+            <p class="med-label">
+              {catalogLabel('commonNames', med.name)} ({med.dosage}
+              {catalogLabel('dosageUnits', med.unit)})
+            </p>
             {#each doseTimes as time, idx (time)}
               {@const doseLog = medLogs.find((l) => l.scheduledTime === time)}
               {@const taken = doseLog?.taken ?? false}
@@ -278,8 +282,8 @@
                   />
                 {/if}
                 <div>
-                  <p class="med-name">{med.name}</p>
-                  <p class="med-dosage">{med.dosage} {med.unit}</p>
+                  <p class="med-name">{catalogLabel('commonNames', med.name)}</p>
+                  <p class="med-dosage">{med.dosage} {catalogLabel('dosageUnits', med.unit)}</p>
                 </div>
               </div>
               {#if taken && takenAt}

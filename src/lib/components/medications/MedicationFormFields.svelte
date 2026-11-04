@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { i18n } from '$lib/i18n.svelte'
   import {
     MEDICATION_TYPES,
@@ -87,7 +88,7 @@
     <label for="name">{i18n.t('medications.form.medicationName')}</label>
     <input
       id="name"
-      bind:value={name}
+      bind:value={() => catalogLabel('commonNames', name), (value) => (name = value)}
       placeholder={i18n.t('medications.new.namePlaceholder')}
       required
     />
@@ -110,8 +111,11 @@
     <div class="field">
       <label for="unit">{i18n.t('medications.form.unit')}</label>
       <select id="unit" bind:value={unit}>
+        {#if unit && !DOSAGE_UNITS.includes(unit)}
+          <option value={unit}>{unit}</option>
+        {/if}
         {#each DOSAGE_UNITS as u (u)}
-          <option value={u}>{u}</option>
+          <option value={u}>{catalogLabel('dosageUnits', u)}</option>
         {/each}
       </select>
     </div>
@@ -163,8 +167,11 @@
   <div class="field">
     <label for="frequency">{i18n.t('medications.form.frequency')}</label>
     <select id="frequency" bind:value={frequency}>
+      {#if frequency && !getFrequenciesForMethod(method).includes(frequency)}
+        <option value={frequency}>{catalogLabel('frequencies', frequency)}</option>
+      {/if}
       {#each getFrequenciesForMethod(method) as f (f)}
-        <option value={f}>{i18n.t(`medications.frequencies.${f}`)}</option>
+        <option value={f}>{catalogLabel('frequencies', f)}</option>
       {/each}
     </select>
   </div>
@@ -263,7 +270,7 @@
       <select id="stockUnit" bind:value={stockUnit}>
         <option value="">{i18n.t('medications.form.selectPlaceholder')}</option>
         {#each STOCK_UNITS as u (u)}
-          <option value={u}>{i18n.t(`medications.stockUnits.${u}`)}</option>
+          <option value={u}>{catalogLabel('stockUnits', u)}</option>
         {/each}
       </select>
     </div>

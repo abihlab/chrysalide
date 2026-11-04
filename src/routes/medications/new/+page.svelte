@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { goto } from '$app/navigation'
   import { i18n } from '$lib/i18n.svelte'
   import { addMedication, getMedication, recordTreatmentChange } from '$lib/db'
@@ -92,7 +93,7 @@
   <select onchange={handleSelectCommonMedication}>
     <option value="">{i18n.t('medications.new.commonPlaceholder')}</option>
     {#each COMMON_MEDICATIONS as med (med.name)}
-      <option value={med.name}>{med.name}</option>
+      <option value={med.name}>{catalogLabel('commonNames', med.name)}</option>
     {/each}
   </select>
 </div>

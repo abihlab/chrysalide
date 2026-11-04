@@ -1,10 +1,11 @@
 <script lang="ts">
+  import { displayMeasurement, formatMeasurement } from '$lib/bloodtest-display'
   import { onMount } from 'svelte'
   import { fade } from 'svelte/transition'
   import { format } from 'date-fns'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
   import { getBloodTests, deleteBloodTest, getUserProfile } from '$lib/db'
-  import { getHematocritStatus, BLOOD_MARKERS, REFERENCE_RANGES } from '$lib/constants'
+  import { getHematocritStatus, REFERENCE_RANGES } from '$lib/constants'
   import type { BloodTest, BloodMarker } from '$lib/types'
   import HormoneChart from '$lib/components/bloodtests/HormoneChart.svelte'
   import ExportButton from '$lib/components/ui/ExportButton.svelte'
@@ -68,10 +69,14 @@
         return {
           marker,
           label: i18n.t('bloodtests.markers.' + marker),
-          value: lastValue.value,
-          unit: BLOOD_MARKERS[marker].unit,
-          targetMin: range?.min,
-          targetMax: range?.max,
+          value: displayMeasurement(marker, lastValue.value, lastValue.unit, i18n.locale).value,
+          unit: displayMeasurement(marker, lastValue.value, lastValue.unit, i18n.locale).unit,
+          targetMin: range
+            ? displayMeasurement(marker, range.min, range.unit, i18n.locale).value
+            : undefined,
+          targetMax: range
+            ? displayMeasurement(marker, range.max, range.unit, i18n.locale).value
+            : undefined,
           status: getMarkerStatus(marker, lastValue.value),
         }
       })
@@ -215,7 +220,7 @@
               <span class="result">
                 <span class="result-label">{i18n.t('bloodtests.markers.' + result.marker)}:</span>
                 <span class:watch={status === 'watch'} class:alert={status === 'alert'}
-                  >{result.value}</span
+                  >{formatMeasurement(result.marker, result.value, result.unit, i18n.locale)}</span
                 >
               </span>
             {/each}

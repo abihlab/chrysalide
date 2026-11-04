@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
   import { format, differenceInDays } from 'date-fns'
@@ -130,8 +131,11 @@
         ><ArrowLeft size={20} /></a
       >
       <div>
-        <h1>{medication.name}</h1>
-        <p class="subtitle">{medication.dosage} {medication.unit} · {methodDescription}</p>
+        <h1>{catalogLabel('commonNames', medication.name)}</h1>
+        <p class="subtitle">
+          {medication.dosage}
+          {catalogLabel('dosageUnits', medication.unit)} · {methodDescription}
+        </p>
       </div>
     </div>
     <div class="header-actions">
@@ -173,14 +177,17 @@
       <PillIcon size={26} color={typeInfo.color} />
     </div>
     <div>
-      <p class="name">{medication.name}</p>
-      <p class="meta">{medication.dosage} {medication.unit} · {methodDescription}</p>
+      <p class="name">{catalogLabel('commonNames', medication.name)}</p>
+      <p class="meta">
+        {medication.dosage}
+        {catalogLabel('dosageUnits', medication.unit)} · {methodDescription}
+      </p>
     </div>
   </div>
 
   <div class="card">
     <p class="card-title"><Clock size={14} /> {i18n.t('medications.detail.frequencyTitle')}</p>
-    <p class="value">{i18n.t(`medications.frequencies.${medication.frequency}`)}</p>
+    <p class="value">{catalogLabel('frequencies', medication.frequency)}</p>
     {#if medication.schedulingMode === 'advanced' && medication.scheduledTimes?.length}
       <div class="times-block">
         <p class="label">{i18n.t('medications.detail.scheduledTimesLabel')}</p>
@@ -223,14 +230,23 @@
           <span class="label">{i18n.t('medications.detail.currentStockLabel')}</span>
           <span class:alert-text={isLowStock}>
             {medication.stock}
-            {medication.stockUnit || medication.unit}
+            {catalogLabel(
+              'stockUnits',
+              catalogLabel('dosageUnits', medication.stockUnit || medication.unit)
+            )}
           </span>
         </div>
       {/if}
       {#if medication.stockAlert !== undefined}
         <div class="row-line">
           <span class="label">{i18n.t('medications.detail.lowStockAlert')}</span>
-          <span>{medication.stockAlert} {medication.stockUnit || medication.unit}</span>
+          <span
+            >{medication.stockAlert}
+            {catalogLabel(
+              'stockUnits',
+              catalogLabel('dosageUnits', medication.stockUnit || medication.unit)
+            )}</span
+          >
         </div>
       {/if}
     </div>

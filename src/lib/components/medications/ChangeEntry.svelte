@@ -21,6 +21,7 @@
 </script>
 
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
   import { format } from 'date-fns'
   import type { TreatmentChange } from '$lib/types'
@@ -52,7 +53,7 @@
         {#if showMedicationName}
           <div class="med-name">
             <Pill size={12} />
-            {change.medicationName}
+            {catalogLabel('commonNames', change.medicationName)}
           </div>
         {/if}
       </div>
@@ -64,9 +65,23 @@
     {#if change.oldValue || change.newValue}
       <div class="values">
         {#if change.oldValue && change.newValue}
-          <span class="old">{change.oldValue}</span> → <span class="new">{change.newValue}</span>
+          <span class="old"
+            >{change.changeType === 'frequency_change'
+              ? catalogLabel('frequencies', change.oldValue)
+              : change.oldValue}</span
+          >
+          →
+          <span class="new"
+            >{change.changeType === 'frequency_change'
+              ? catalogLabel('frequencies', change.newValue)
+              : change.newValue}</span
+          >
         {:else if change.newValue}
-          <span class="new">{change.newValue}</span>
+          <span class="new"
+            >{change.changeType === 'frequency_change'
+              ? catalogLabel('frequencies', change.newValue)
+              : change.newValue}</span
+          >
         {/if}
       </div>
     {/if}

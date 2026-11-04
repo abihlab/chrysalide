@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { displayMeasurement } from '$lib/bloodtest-display'
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
   import { i18n } from '$lib/i18n.svelte'
@@ -48,9 +49,18 @@
     notes = test.notes ?? ''
 
     const values = { ...EMPTY_MARKER_VALUES }
+    const units = { ...DEFAULT_MARKER_UNITS }
     for (const result of test.results) {
-      values[result.marker] = result.value.toString()
+      // Only testosterone needs a numeric input conversion; other Brazilian units
+      // are equivalent labels on the existing canonical selector values.
+      const display =
+        result.marker === 'testosterone'
+          ? displayMeasurement(result.marker, result.value, result.unit, i18n.locale)
+          : { value: result.value, unit: result.unit }
+      values[result.marker] = display.value.toString()
+      units[result.marker] = display.unit
     }
+    markerUnits = units
     markerValues = values
 
     loading = false

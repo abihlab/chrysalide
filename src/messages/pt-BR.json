@@ -299,6 +299,37 @@
       "dateLabel": "Data",
       "timeLabel": "Horário",
       "detailsLabel": "Detalhes"
+    },
+    "commonNames": {
+      "Œstradiol (Estrofem)": "Estradiol (Estrofem)",
+      "Œstradiol (Progynova)": "Estradiol (Progynova)",
+      "Œstrogel": "Œstrogel",
+      "Estraderm TTS": "Estraderm TTS",
+      "Valérate d'œstradiol (EV)": "Valerato de estradiol (EV)",
+      "Cypionate d'œstradiol (EC)": "Cipionato de estradiol (EC)",
+      "Énanthate d'estradiol (EEn)": "Enantato de estradiol (EEn)",
+      "Undécylate d'estradiol (EUn)": "Undecilato de estradiol (EUn)",
+      "Provames": "Provames",
+      "Oestrodose": "Oestrodose",
+      "Estreva": "Estreva",
+      "Spironolactone": "Espironolactona",
+      "Acétate de cyprotérone (Androcur)": "Acetato de ciproterona (Androcur)",
+      "Bicalutamide": "Bicalutamida",
+      "Progestérone (Utrogestan)": "Progesterona (Utrogestan)",
+      "Progestérone micronisée": "Progesterona micronizada",
+      "Testostérone (Androgel)": "Testosterona (Androgel)",
+      "Énanthate de testostérone": "Enantato de testosterona",
+      "Cypionate de testostérone": "Cipionato de testosterona",
+      "Undécanoate de testostérone (Nebido)": "Undecanoato de testosterona (Nebido)",
+      "Décapeptyl": "Décapeptyl",
+      "Lupron": "Lupron"
+    },
+    "dosageUnits": {
+      "mg": "mg",
+      "µg": "µg",
+      "mL": "mL",
+      "pressions": "acionamentos",
+      "patches": "adesivos"
     }
   },
   "bloodtests": {
@@ -812,13 +843,7 @@
       "chirurgie-hysterectomie": {
         "title": "Histerectomia",
         "description": "Cirurgia de remoção do útero",
-        "milestones": [
-          "Consulta",
-          "Exames",
-          "Cirurgia",
-          "Recuperação",
-          "Acompanhamento"
-        ]
+        "milestones": ["Consulta", "Exames", "Cirurgia", "Recuperação", "Acompanhamento"]
       },
       "chirurgie-phalloplastie": {
         "title": "Faloplastia",
@@ -835,13 +860,7 @@
       "chirurgie-metoidioplastie": {
         "title": "Metoidioplastia",
         "description": "Cirurgia genital masculinizante alternativa",
-        "milestones": [
-          "Consulta",
-          "Avaliação",
-          "Cirurgia",
-          "Recuperação",
-          "Acompanhamento"
-        ]
+        "milestones": ["Consulta", "Avaliação", "Cirurgia", "Recuperação", "Acompanhamento"]
       },
       "changement-etat-civil": {
         "title": "Reconhecimento legal de gênero",
@@ -1210,6 +1229,51 @@
           "a": "Se você estiver em sofrimento, procure um serviço de apoio (veja Recursos > Apoio). Em caso de emergência médica, ligue para o número local de emergência (911 nos EUA, 112 na Europa). Você não está só."
         }
       }
+    },
+    "tags": {
+      "forum": "fórum",
+      "communauté": "comunidade",
+      "témoignages": "relatos",
+      "entraide": "apoio mútuo",
+      "wiki": "wiki",
+      "information": "informação",
+      "parcours": "trajetórias",
+      "guide": "guia",
+      "associations": "associações",
+      "carte": "mapa",
+      "groupes": "grupos",
+      "local": "local",
+      "association": "associação",
+      "droits": "direitos",
+      "plaidoyer": "defesa de direitos",
+      "national": "nacional",
+      "THS": "terapia hormonal",
+      "médecins": "profissionais de medicina",
+      "hormones": "hormônios",
+      "féminisant": "feminilizante",
+      "oestrogènes": "estrogênios",
+      "masculinisant": "masculinizante",
+      "testostérone": "testosterona",
+      "administratif": "administrativo",
+      "état civil": "registro civil",
+      "prénom": "nome",
+      "CEC": "CEC",
+      "tribunal": "tribunal",
+      "procédure": "procedimento",
+      "travail": "trabalho",
+      "discrimination": "discriminação",
+      "entreprise": "empresa",
+      "proches": "pessoas próximas",
+      "famille": "família",
+      "soutien": "apoio",
+      "guides": "guias",
+      "parole": "conversa",
+      "science": "ciência",
+      "recherche": "pesquisa",
+      "données": "dados",
+      "santé": "saúde",
+      "éducation": "educação",
+      "US": "EUA"
     }
   },
   "theme": {
@@ -1404,7 +1468,7 @@
       "bloodtest": "Exame de sangue",
       "laser": "Depilação a laser",
       "electrolysis": "Eletrólise",
-      "tattoo": "Tatuadora(or)",
+      "tattoo": "Tatuador(a)",
       "aesthetician": "Esteticista",
       "hairdresser": "Cabeleireira(o)",
       "other": "Outro",

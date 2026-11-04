@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { displayMeasurement, formatMeasurement, formatLabNumber } from '$lib/bloodtest-display'
+  import { catalogLabel } from '$lib/catalog-labels'
   import { onMount } from 'svelte'
   import { formatDistanceToNow, format } from 'date-fns'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
@@ -23,7 +25,6 @@
   import { getNextApplicationZone } from '$lib/utils'
   import {
     REFERENCE_RANGES,
-    BLOOD_MARKERS,
     getHematocritStatus,
     GEL_APPLICATION_ZONES,
     PATCH_APPLICATION_ZONES,
@@ -205,13 +206,33 @@
       <div class="gauge-zone">
         <div class="bloom" aria-hidden="true"></div>
         <GaugeMeter
-          value={primaryHormone.value}
-          unit={primaryHormone.unit}
-          min={primaryHormoneRange?.min ?? primaryHormone.value}
-          max={primaryHormoneRange?.max ?? primaryHormone.value}
+          value={displayMeasurement(
+            primaryHormone.marker,
+            primaryHormone.value,
+            primaryHormone.unit,
+            i18n.locale
+          ).value}
+          unit={displayMeasurement(
+            primaryHormone.marker,
+            primaryHormone.value,
+            primaryHormone.unit,
+            i18n.locale
+          ).unit}
+          min={displayMeasurement(
+            primaryHormone.marker,
+            primaryHormoneRange?.min ?? primaryHormone.value,
+            primaryHormoneRange?.unit ?? primaryHormone.unit,
+            i18n.locale
+          ).value}
+          max={displayMeasurement(
+            primaryHormone.marker,
+            primaryHormoneRange?.max ?? primaryHormone.value,
+            primaryHormoneRange?.unit ?? primaryHormone.unit,
+            i18n.locale
+          ).value}
           label={i18n.t('bloodtests.markers.' + primaryHormone.marker)}
           note={primaryHormoneRange
-            ? `${i18n.t('dashboard.targetRange')} ${primaryHormoneRange.min}–${primaryHormoneRange.max} ${primaryHormoneRange.unit}` +
+            ? `${i18n.t('dashboard.targetRange')} ${formatLabNumber(displayMeasurement(primaryHormone.marker, primaryHormoneRange.min, primaryHormoneRange.unit, i18n.locale).value, i18n.locale)}–${formatMeasurement(primaryHormone.marker, primaryHormoneRange.max, primaryHormoneRange.unit, i18n.locale)}` +
               (isVerifiedMasculinizingTestosterone
                 ? `, ${i18n.t('dashboard.targetRangeSourceMasculinizing')}.`
                 : '.')
@@ -224,7 +245,8 @@
       {@const status = getHematocritStatus(hematocrit.value)}
       <div class="hematocrit-mobile">
         <Pill status={status === 'ok' ? 'neutral' : status}>
-          {BLOOD_MARKERS.hematocrit.label} <b>{hematocrit.value} {hematocrit.unit}</b>
+          {i18n.t('bloodtests.markers.hematocrit')}
+          <b>{formatMeasurement('hematocrit', hematocrit.value, hematocrit.unit, i18n.locale)}</b>
         </Pill>
       </div>
       <div
@@ -233,7 +255,8 @@
         class:d-alert={status === 'alert'}
       >
         <span class="d"></span>
-        {BLOOD_MARKERS.hematocrit.label} <b>{hematocrit.value} {hematocrit.unit}</b>
+        {i18n.t('bloodtests.markers.hematocrit')}
+        <b>{formatMeasurement('hematocrit', hematocrit.value, hematocrit.unit, i18n.locale)}</b>
       </div>
     {/if}
   </div>
@@ -246,7 +269,7 @@
           <Row href={`/medications/${nextDoseMed.id}`}>
             <div class="row-head">
               <div>
-                <p class="title">{nextDoseMed.name}</p>
+                <p class="title">{catalogLabel('commonNames', nextDoseMed.name)}</p>
                 <p class="meta">
                   {zoneOrder.length > 0 ? i18n.t('medications.siteRotation') : nextDoseTime}
                 </p>
@@ -292,8 +315,11 @@
         {/if}
         {#if nextDoseMed && nextDoseMed.stock !== undefined && stockDaysRemaining !== null}
           <Row href={`/medications/${nextDoseMed.id}`}>
-            <p class="title">{nextDoseMed.name}</p>
-            <p class="meta">{nextDoseMed.stock} {nextDoseMed.stockUnit ?? ''}</p>
+            <p class="title">{catalogLabel('commonNames', nextDoseMed.name)}</p>
+            <p class="meta">
+              {nextDoseMed.stock}
+              {catalogLabel('stockUnits', catalogLabel('dosageUnits', nextDoseMed.stockUnit ?? ''))}
+            </p>
             <StockBar
               fraction={stockDaysRemaining / 30}
               label={i18n
@@ -321,7 +347,7 @@
         {#if nextDoseMed}
           <a class="entry now" href={`/medications/${nextDoseMed.id}`}>
             <p class="when">{nextDoseTime}</p>
-            <p class="title">{nextDoseMed.name}</p>
+            <p class="title">{catalogLabel('commonNames', nextDoseMed.name)}</p>
             {#if zoneOrder.length > 0}
               <p class="meta">{i18n.t('medications.siteRotation')}</p>
               <div class="zones">
@@ -358,8 +384,11 @@
         {/if}
         {#if nextDoseMed && nextDoseMed.stock !== undefined && stockDaysRemaining !== null}
           <a class="entry" href={`/medications/${nextDoseMed.id}`}>
-            <p class="title">{nextDoseMed.name}</p>
-            <p class="meta">{nextDoseMed.stock} {nextDoseMed.stockUnit ?? ''}</p>
+            <p class="title">{catalogLabel('commonNames', nextDoseMed.name)}</p>
+            <p class="meta">
+              {nextDoseMed.stock}
+              {catalogLabel('stockUnits', catalogLabel('dosageUnits', nextDoseMed.stockUnit ?? ''))}
+            </p>
             <div class="stockbar-track">
               <div
                 class="stockbar-fill"

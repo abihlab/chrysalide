@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { catalogLabel } from '$lib/catalog-labels'
   import { onMount } from 'svelte'
   import { format, addDays, startOfDay } from 'date-fns'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
@@ -349,7 +350,7 @@
             <div class="med-head">
               <div>
                 <div class="name-row">
-                  <h3>{med.name}</h3>
+                  <h3>{catalogLabel('commonNames', med.name)}</h3>
                   <span
                     class="type-badge"
                     style:border-color={typeInfo.color}
@@ -360,10 +361,12 @@
                 </div>
                 <p class="meta">
                   {med.dosage}
-                  {med.unit} · {i18n.t(`medications.methods.${med.method}`)}
+                  {catalogLabel('dosageUnits', med.unit)} · {i18n.t(
+                    `medications.methods.${med.method}`
+                  )}
                 </p>
                 <p class="meta-sm">
-                  {i18n.t(`medications.frequencies.${med.frequency}`)} · {i18n.t(
+                  {catalogLabel('frequencies', med.frequency)} · {i18n.t(
                     'medications.list.sincePrefix'
                   )}
                   {format(new Date(med.startDate), 'd MMM yyyy', {
@@ -439,7 +442,10 @@
                 <span>{i18n.t('medications.list.stockLabel')}</span>
                 <span class:low={isLowStock}>
                   {med.stock}
-                  {med.stockUnit || med.unit}
+                  {catalogLabel(
+                    'stockUnits',
+                    catalogLabel('dosageUnits', med.stockUnit || med.unit)
+                  )}
                   {#if isLowStock}
                     <AlertTriangle size={12} />
                     {i18n.t('medications.list.stockLow')}
@@ -470,12 +476,14 @@
               <div class="med-head">
                 <div>
                   <div class="name-row">
-                    <h3>{med.name}</h3>
+                    <h3>{catalogLabel('commonNames', med.name)}</h3>
                     <span class="type-badge muted">{i18n.t('medications.list.inactiveBadge')}</span>
                   </div>
                   <p class="meta">
                     {med.dosage}
-                    {med.unit} · {i18n.t(`medications.methods.${med.method}`)}
+                    {catalogLabel('dosageUnits', med.unit)} · {i18n.t(
+                      `medications.methods.${med.method}`
+                    )}
                   </p>
                 </div>
                 <a
@@ -500,7 +508,7 @@
 >
   <p class="dialog-title"><Droplet size={18} /> {i18n.t('medications.list.gelZoneDialogTitle')}</p>
   <p class="dialog-desc">
-    {i18n.t('medications.list.gelZoneDialogDesc')} <b>{zoneMedName}</b>
+    {i18n.t('medications.list.gelZoneDialogDesc')} <b>{catalogLabel('commonNames', zoneMedName)}</b>
   </p>
   <div class="zone-grid">
     {#each zoneOrder as zone (zone)}
@@ -544,7 +552,7 @@
 >
   <p class="dialog-title">{i18n.t('medications.list.addPastDoseTitle')}</p>
   <p class="dialog-desc">
-    {i18n.t('medications.list.pastDoseDesc')} <b>{selectedMedName}</b>
+    {i18n.t('medications.list.pastDoseDesc')} <b>{catalogLabel('commonNames', selectedMedName)}</b>
   </p>
   <div class="field-row">
     <div class="field">

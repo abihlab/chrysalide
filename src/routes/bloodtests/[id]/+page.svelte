@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { displayMeasurement, formatMeasurement, formatLabNumber } from '$lib/bloodtest-display'
   import { page } from '$app/state'
   import { goto } from '$app/navigation'
   import { format } from 'date-fns'
@@ -120,6 +121,7 @@
           {#each groupResults as { marker, result } (marker)}
             {@const status = marker === 'hematocrit' ? getHematocritStatus(result.value) : 'ok'}
             {@const source = getReferenceRangeSource(marker, context)}
+            {@const display = displayMeasurement(marker, result.value, result.unit, i18n.locale)}
             {@const range = REFERENCE_RANGES.find(
               (r) => r.marker === marker && r.context === context
             )}
@@ -136,10 +138,16 @@
                 {/if}
               </div>
               <div class="result-value">
-                <span class="value">{result.value} <span class="unit">{result.unit}</span></span>
+                <span class="value"
+                  >{formatLabNumber(display.value, i18n.locale)}
+                  <span class="unit">{display.unit}</span></span
+                >
                 {#if range}
                   <p class="target">
-                    {i18n.t('bloodtests.detail.targetLabel')}: {range.min} - {range.max}
+                    {i18n.t('bloodtests.detail.targetLabel')}: {formatLabNumber(
+                      displayMeasurement(marker, range.min, range.unit, i18n.locale).value,
+                      i18n.locale
+                    )} - {formatMeasurement(marker, range.max, range.unit, i18n.locale)}
                     {#if source}({source}){/if}
                   </p>
                 {/if}

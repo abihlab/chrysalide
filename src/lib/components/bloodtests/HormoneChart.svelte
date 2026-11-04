@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { formatMeasurement } from '$lib/bloodtest-display'
   import { i18n, getDateLocale } from '$lib/i18n.svelte'
   import { format } from 'date-fns'
   import { BLOOD_MARKERS, REFERENCE_RANGES, getHematocritStatus } from '$lib/constants'
@@ -149,7 +150,7 @@
         const outOfRange = isOutOfRange(marker, result.value)
         return {
           label: i18n.t('bloodtests.markers.' + marker),
-          value: `${result.value} ${BLOOD_MARKERS[marker].unit}`,
+          value: formatMeasurement(marker, result.value, result.unit, i18n.locale),
           color,
           alert: outOfRange,
         }
@@ -230,8 +231,7 @@
         <span class="dot" style:background={s.color}></span>
         <span class="label">{i18n.t('bloodtests.markers.' + s.marker)}:</span>
         <span class="value" class:watch={status === 'watch'} class:alert={status === 'alert'}>
-          {s.latest}
-          {BLOOD_MARKERS[s.marker].unit}
+          {formatMeasurement(s.marker, s.latest, BLOOD_MARKERS[s.marker].unit, i18n.locale)}
         </span>
       </div>
     {/each}
