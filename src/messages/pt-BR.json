@@ -404,41 +404,41 @@
     }
   },
   "dashboard": {
-    "welcome": "Welcome to your space",
-    "subtitle": "Private and caring medical tracking",
-    "todayDoses": "Today's doses",
-    "activeMeds": "Active medications",
-    "todayMeds": "Today's medications",
-    "viewAll": "View all",
-    "noMeds": "No medications configured",
-    "addMed": "Add a medication",
-    "upcomingAppts": "Upcoming appointments",
-    "noAppts": "No upcoming appointments",
-    "addAppt": "Add an appointment",
-    "newMed": "New medication",
-    "newTest": "New test",
-    "greeting": "Hello",
-    "targetRange": "Target range",
-    "targetRangeSourceMasculinizing": "per Callen-Lorde",
-    "nextDose": "Next dose",
-    "thisWeek": "This week",
-    "stockEstimate": "Estimated to run out in {days} days",
-    "mood": "Mood:",
+    "welcome": "Boas-vindas ao seu espaço",
+    "subtitle": "Acompanhamento médico privado e acolhedor",
+    "todayDoses": "Doses de hoje",
+    "activeMeds": "Medicamentos ativos",
+    "todayMeds": "Medicamentos de hoje",
+    "viewAll": "Ver todos",
+    "noMeds": "Nenhum medicamento cadastrado",
+    "addMed": "Adicionar medicamento",
+    "upcomingAppts": "Próximas consultas",
+    "noAppts": "Nenhuma consulta agendada",
+    "addAppt": "Agendar consulta",
+    "newMed": "Novo medicamento",
+    "newTest": "Novo exame",
+    "greeting": "Olá",
+    "targetRange": "Faixa-alvo",
+    "targetRangeSourceMasculinizing": "conforme Callen-Lorde",
+    "nextDose": "Próxima dose",
+    "thisWeek": "Esta semana",
+    "stockEstimate": "Estoque estimado para mais {days} dias",
+    "mood": "Humor:",
     "recap": {
-      "title": "Summary",
-      "loading": "Loading summary...",
-      "transitionMonths": "months of transition",
-      "transitionDays": "days of transition",
-      "since": "Since",
-      "streak": "Dose streak",
-      "toStart": "To start",
-      "day": "day",
-      "days": "days",
-      "lastLevels": "Latest levels",
-      "objectives": "Goals",
-      "inProgress": "in progress",
-      "completed": "completed",
-      "encouragement": "Keep it up, you've got this! 💪"
+      "title": "Resumo",
+      "loading": "Carregando resumo...",
+      "transitionMonths": "meses de transição",
+      "transitionDays": "dias de transição",
+      "since": "Desde",
+      "streak": "Sequência de doses",
+      "toStart": "Para começar",
+      "day": "dia",
+      "days": "dias",
+      "lastLevels": "Resultados mais recentes",
+      "objectives": "Objetivos",
+      "inProgress": "em andamento",
+      "completed": "concluídos",
+      "encouragement": "Continue assim! Você consegue! 💪"
     }
   },
   "journal": {
@@ -944,36 +944,36 @@
     }
   },
   "onboarding": {
-    "optional": "optional",
+    "optional": "opcional",
     "welcome": {
-      "title": "Welcome to Chrysalide",
-      "subtitle": "Your caring and confidential transition companion",
-      "localTitle": "100% Local",
-      "localDesc": "All your data stays on your device. No servers, no accounts.",
-      "privacyTitle": "Maximum privacy",
-      "privacyDesc": "Your medical information never leaves your phone.",
-      "communityTitle": "Made by and for the community",
-      "communityDesc": "Designed with love to support your transition.",
-      "start": "Get started"
+      "title": "Boas-vindas ao Chrysalide",
+      "subtitle": "Seu companheiro de transição acolhedor e confidencial",
+      "localTitle": "100% local",
+      "localDesc": "Seus dados ficam no seu dispositivo. Sem servidores ou contas.",
+      "privacyTitle": "Privacidade máxima",
+      "privacyDesc": "Suas informações médicas nunca saem do seu celular.",
+      "communityTitle": "Feito pela comunidade e para a comunidade",
+      "communityDesc": "Criado com carinho para acompanhar sua transição.",
+      "start": "Começar"
     },
     "profile": {
-      "title": "Your profile",
-      "subtitle": "This information is optional and stays private",
-      "pronouns": "Your pronouns (optional)",
-      "transitionType": "Transition type (optional)",
-      "skip": "Skip",
-      "continue": "Continue"
+      "title": "Seu perfil",
+      "subtitle": "Essas informações são opcionais e permanecem privadas",
+      "pronouns": "Seus pronomes (opcional)",
+      "transitionType": "Tipo de transição (opcional)",
+      "skip": "Pular",
+      "continue": "Continuar"
     },
     "medication": {
-      "title": "Your medications",
-      "subtitle": "Add your treatment to track your doses and stock",
-      "reminders": "Dose reminders",
-      "stockAlerts": "Stock tracking with alerts",
-      "changeHistory": "Treatment change history",
-      "calendar": "Dose calendar",
-      "addMed": "Add a medication",
-      "later": "Later",
-      "helpText": "You can always add medications later from the Medications menu"
+      "title": "Seus medicamentos",
+      "subtitle": "Adicione seu tratamento para acompanhar doses e estoque",
+      "reminders": "Lembretes de doses",
+      "stockAlerts": "Controle de estoque com alertas",
+      "changeHistory": "Histórico de alterações do tratamento",
+      "calendar": "Calendário de doses",
+      "addMed": "Adicionar medicamento",
+      "later": "Depois",
+      "helpText": "Você também pode adicionar medicamentos mais tarde pelo menu Medicamentos"
     }
   },
   "progress": {
@@ -1213,92 +1213,92 @@
     }
   },
   "theme": {
-    "modeTitle": "Display mode",
-    "paletteTitle": "Color palette",
-    "a11yTitle": "Accessibility",
-    "reducedMotion": "Reduce motion",
-    "reducedMotionDescription": "Disables animations for a calmer experience",
+    "modeTitle": "Modo de exibição",
+    "paletteTitle": "Paleta de cores",
+    "a11yTitle": "Acessibilidade",
+    "reducedMotion": "Reduzir movimento",
+    "reducedMotionDescription": "Desativa animações para uma experiência mais tranquila",
     "modes": {
       "dark": {
-        "label": "Dark",
-        "description": "Dark theme by default"
+        "label": "Escuro",
+        "description": "Tema escuro por padrão"
       },
       "light": {
-        "label": "Light",
-        "description": "Light theme"
+        "label": "Claro",
+        "description": "Tema claro"
       },
       "system": {
-        "label": "System",
-        "description": "Follows system preferences"
+        "label": "Sistema",
+        "description": "Segue as preferências do sistema"
       }
     },
     "schemes": {
       "trans": {
         "label": "Trans",
-        "description": "Trans flag colors"
+        "description": "Cores da bandeira trans"
       },
       "blue": {
-        "label": "Ocean",
-        "description": "Soothing blue tones"
+        "label": "Oceano",
+        "description": "Tons de azul suaves"
       },
       "pink": {
-        "label": "Rose",
-        "description": "Warm rosy tones"
+        "label": "Rosa",
+        "description": "Tons quentes de rosa"
       },
       "violet": {
-        "label": "Violet",
-        "description": "Mystical purple tones"
+        "label": "Violeta",
+        "description": "Tons místicos de roxo"
       }
     }
   },
   "sync": {
     "export": {
-      "title": "Export via QR code",
-      "generating": "Generating QR codes...",
-      "generationError": "Generation failed",
-      "retry": "Retry",
-      "scanInOrder": "Scan each QR code in order on the other device.",
-      "scanSingle": "Scan this QR code on the other device to transfer your data.",
-      "session": "Session"
+      "title": "Exportar por QR Code",
+      "generating": "Gerando QR Codes...",
+      "generationError": "Falha ao gerar QR Codes",
+      "retry": "Tentar novamente",
+      "scanInOrder": "Leia cada QR Code na ordem indicada no outro dispositivo.",
+      "scanSingle": "Leia este QR Code no outro dispositivo para transferir seus dados.",
+      "session": "Sessão"
     },
     "import": {
-      "title": "Import via QR code",
-      "success": "Import successful!",
-      "recordsImported": "{count} records imported",
-      "importing": "Importing...",
-      "cameraError": "Cannot access the camera",
-      "importError": "Import error",
-      "scanInstructions": "Scan the QR codes generated on the other device to import your data.",
-      "startScan": "Start scanning",
-      "cameraRequired": "Requires camera access and a browser compatible with the BarcodeDetector API.",
-      "progress": "Progress"
+      "title": "Importar por QR Code",
+      "success": "Importação realizada com sucesso!",
+      "recordsImported": "{count} registros importados",
+      "importing": "Importando...",
+      "cameraError": "Não foi possível acessar a câmera",
+      "importError": "Erro na importação",
+      "scanInstructions": "Leia os QR Codes gerados no outro dispositivo para importar seus dados.",
+      "startScan": "Iniciar leitura",
+      "cameraRequired": "Requer acesso à câmera e um navegador compatível com a API BarcodeDetector.",
+      "progress": "Progresso"
     }
   },
   "export": {
-    "button": "Export",
-    "asPNG": "Export as PNG",
-    "asPDF": "Export as PDF",
-    "captureError": "Error capturing the chart",
-    "lastValues": "Latest values",
-    "marker": "Marker",
-    "value": "Value",
-    "target": "Target",
-    "statusLabel": "Status",
+    "button": "Exportar",
+    "asPNG": "Exportar como PNG",
+    "asPDF": "Exportar como PDF",
+    "captureError": "Erro ao capturar o gráfico",
+    "lastValues": "Resultados mais recentes",
+    "marker": "Marcador",
+    "value": "Valor",
+    "target": "Alvo",
+    "statusLabel": "Situação",
     "statusNormal": "Normal",
-    "statusLow": "Low",
-    "statusHigh": "High",
-    "patient": "Patient",
-    "date": "Date",
-    "atConnector": "at",
-    "generatedBy": "Generated by Chrysalide - chrysalide.app",
-    "disclaimer": "This document is informational and does not replace medical advice."
+    "statusLow": "Baixo",
+    "statusHigh": "Alto",
+    "patient": "Paciente",
+    "date": "Data",
+    "atConnector": "às",
+    "generatedBy": "Gerado pelo Chrysalide - chrysalide.app",
+    "disclaimer": "Este documento é apenas informativo e não substitui a orientação médica."
   },
   "milestones": {
-    "title": "Title",
-    "titlePlaceholder": "Step title",
-    "targetDate": "Target date (optional)",
-    "selectDate": "Select a date",
-    "doneOn": "Done on"
+    "title": "Título",
+    "titlePlaceholder": "Título da etapa",
+    "targetDate": "Data prevista (opcional)",
+    "selectDate": "Selecione uma data",
+    "doneOn": "Concluído em"
   },
   "appointments": {
     "title": "Appointments",
