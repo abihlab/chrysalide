@@ -1069,145 +1069,145 @@
     }
   },
   "resources": {
-    "title": "Resources",
-    "subtitle": "Useful links for the trans community",
-    "searchPlaceholder": "Search for a resource...",
-    "all": "All",
-    "faqCard": "Frequently asked questions",
-    "faqCardDesc": "App help and general information",
-    "resultCount": "{count} result",
-    "resultsCount": "{count} results",
-    "for": "for",
-    "noResults": "No resources found",
-    "disclaimer": "These resources are provided for informational purposes. Chrysalide is not affiliated with these organizations and cannot guarantee the accuracy of the information. For any medical advice, consult a healthcare professional.",
+    "title": "Recursos",
+    "subtitle": "Links úteis para a comunidade trans",
+    "searchPlaceholder": "Pesquisar recursos...",
+    "all": "Todos",
+    "faqCard": "Perguntas frequentes",
+    "faqCardDesc": "Ajuda sobre o aplicativo e informações gerais",
+    "resultCount": "{count} resultado",
+    "resultsCount": "{count} resultados",
+    "for": "para",
+    "noResults": "Nenhum recurso encontrado",
+    "disclaimer": "Estes recursos são disponibilizados apenas para fins informativos. O Chrysalide não possui vínculo com essas organizações e não pode garantir a precisão das informações. Para orientações médicas, procure um profissional de saúde.",
     "categories": {
-      "community": "Community",
-      "medical": "Medical",
-      "legal": "Legal & administrative",
-      "support": "Support",
-      "information": "Information"
+      "community": "Comunidade",
+      "medical": "Saúde",
+      "legal": "Jurídico e administrativo",
+      "support": "Apoio",
+      "information": "Informação"
     },
     "items": {
       "partagenre": {
         "name": "Partagenre",
-        "description": "Historic French-language trans community forum. Discussions, testimonials, advice and peer support. (French-language resource)"
+        "description": "Fórum histórico da comunidade trans francófona. Debates, relatos, orientações e apoio entre pessoas da comunidade. (Recurso em francês)"
       },
       "wiki-trans": {
         "name": "Wiki Trans",
-        "description": "Collaborative wiki with comprehensive information on trans journeys in France: medical, administrative, social. (French-language resource)"
+        "description": "Wiki colaborativa com informações abrangentes sobre trajetórias trans na França: saúde, burocracia e vida social. (Recurso em francês)"
       },
       "carte-associations": {
-        "name": "Trans associations map",
-        "description": "Collaborative map of trans associations in France. Find support groups and associations near you. (French-language resource)"
+        "name": "Mapa de associações trans",
+        "description": "Mapa colaborativo de associações trans na França. Encontre grupos de apoio e associações perto de você. (Recurso em francês)"
       },
       "fransgenre": {
         "name": "Fransgenre",
-        "description": "National trans and intersex association. Resources, support and advocacy for the rights of trans people. (French-language resource)"
+        "description": "Associação nacional de pessoas trans e intersexo. Recursos, apoio e defesa dos direitos de pessoas trans. (Recurso em francês)"
       },
       "sofect-alternatives": {
-        "name": "Independent pathways (outside SOFeRT)",
-        "description": "Information on medical transition pathways outside official hospital teams in France. (French-language resource)"
+        "name": "Caminhos independentes (fora da SOFeRT)",
+        "description": "Informações sobre processos de transição médica fora das equipes hospitalares oficiais na França. (Recurso em francês)"
       },
       "ths-feminisant": {
-        "name": "Feminising HRT guide",
-        "description": "Detailed information on feminising hormone therapy: molecules, dosages, effects, monitoring. (French-language resource)"
+        "name": "Guia de terapia hormonal feminilizante",
+        "description": "Informações detalhadas sobre terapia hormonal feminilizante: substâncias, doses, efeitos e acompanhamento. (Recurso em francês)"
       },
       "ths-masculinisant": {
-        "name": "Masculinising HRT guide",
-        "description": "Detailed information on masculinising hormone therapy: testosterone, effects, medical monitoring. (French-language resource)"
+        "name": "Guia de terapia hormonal masculinizante",
+        "description": "Informações detalhadas sobre terapia hormonal masculinizante: testosterona, efeitos e acompanhamento médico. (Recurso em francês)"
       },
       "administrans": {
         "name": "Administrans",
-        "description": "Comprehensive guide to administrative procedures in France: legal gender marker change, name, civil status. (French-language resource)"
+        "description": "Guia abrangente de processos administrativos na França: alteração do marcador de gênero, nome e registro civil. (Recurso em francês)"
       },
       "cec-guide": {
-        "name": "Legal gender marker change (CEC)",
-        "description": "Detailed procedure for changing the gender marker on civil records in France. (French-language resource)"
+        "name": "Alteração do marcador de gênero no registro civil (CEC)",
+        "description": "Procedimento detalhado para alterar o marcador de gênero em registros civis na França. (Recurso em francês)"
       },
       "droits-travail": {
-        "name": "Workplace rights",
-        "description": "Resources on the rights of trans people at work: discrimination, workplace transition, HR guides. (French-language resource)"
+        "name": "Direitos no trabalho",
+        "description": "Recursos sobre direitos de pessoas trans no trabalho: discriminação, transição no ambiente profissional e guias de RH. (Recurso em francês)"
       },
       "ligne-ecoute": {
-        "name": "Resources for loved ones",
-        "description": "Guides and resources for family and friends of trans people. Support, advice and practical information. (French-language resource)"
+        "name": "Recursos para pessoas próximas",
+        "description": "Guias e recursos para familiares e amizades de pessoas trans. Apoio, orientações e informações práticas. (Recurso em francês)"
       },
       "trans-posez": {
         "name": "Trans-Posez",
-        "description": "Peer support association for trans people. Discussion groups, activities, peer-to-peer support. (French-language resource)"
+        "description": "Associação de apoio entre pessoas trans. Grupos de conversa, atividades e apoio mútuo. (Recurso em francês)"
       },
       "transfemscience": {
         "name": "Transfeminine Science",
-        "description": "English-language scientific resource on feminising HRT. Detailed articles, research, data."
+        "description": "Recurso científico em inglês sobre terapia hormonal feminilizante. Artigos detalhados, pesquisas e dados."
       },
       "folx-health": {
-        "name": "FOLX Health (US)",
-        "description": "Educational resources on trans health. Although US-based, contains useful medical information."
+        "name": "FOLX Health (EUA)",
+        "description": "Recursos educativos sobre saúde trans. Embora seja dos Estados Unidos, contém informações médicas úteis."
       }
     },
     "faq": {
-      "title": "FAQ",
-      "subtitle": "Frequently asked questions",
-      "all": "All",
-      "helpText": "Can't find the answer to your question?",
-      "consultPrefix": "Check out the",
-      "communityResources": "community resources",
-      "orReport": "or report an issue on GitHub.",
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas frequentes",
+      "all": "Todas",
+      "helpText": "Não encontrou a resposta para sua pergunta?",
+      "consultPrefix": "Consulte os",
+      "communityResources": "recursos da comunidade",
+      "orReport": "ou relate um problema no GitHub.",
       "categoriesLabels": {
-        "app": "App",
-        "medical": "Medical",
-        "general": "General"
+        "app": "Aplicativo",
+        "medical": "Saúde",
+        "general": "Geral"
       },
-      "question": "question",
-      "questions": "questions",
+      "question": "pergunta",
+      "questions": "perguntas",
       "items": {
         "app-data-privacy": {
-          "q": "Is my data secure?",
-          "a": "Yes, all your data is stored only on your device (IndexedDB). Nothing is sent to any server. You have full control over your personal information. Remember to make regular backups via the Export function in settings."
+          "q": "Meus dados estão seguros?",
+          "a": "Sim, todos os seus dados são armazenados apenas no seu dispositivo (IndexedDB). Nada é enviado a servidores. Você tem controle sobre suas informações pessoais. Lembre-se de fazer cópias de segurança regularmente pela função Exportar nas configurações."
         },
         "app-offline": {
-          "q": "Does the app work offline?",
-          "a": "Yes! Chrysalide is a PWA (Progressive Web App) that works entirely offline once installed. All features are available without an internet connection."
+          "q": "O aplicativo funciona sem internet?",
+          "a": "Sim! O Chrysalide é um PWA (aplicativo web progressivo) que funciona totalmente offline após a instalação. Todos os recursos ficam disponíveis sem conexão com a internet."
         },
         "app-backup": {
-          "q": "How do I back up my data?",
-          "a": "Go to Settings > Export data. A JSON file containing all your data will be downloaded. Keep it in a safe place. To restore, use the Import function in settings."
+          "q": "Como faço uma cópia de segurança dos meus dados?",
+          "a": "Acesse Configurações > Exportar dados. Um arquivo JSON com seus dados será baixado. Guarde-o em um local seguro. Para restaurar, use a função Importar nas configurações."
         },
         "app-install": {
-          "q": "How do I install the app on my phone?",
-          "a": "On Android (Chrome): Menu ⋮ > \"Install app\" or \"Add to home screen\". On iOS (Safari): Share button > \"Add to Home Screen\". The app will be available like a native application."
+          "q": "Como instalo o aplicativo no celular?",
+          "a": "No Android (Chrome): Menu ⋮ > \"Instalar aplicativo\" ou \"Adicionar à tela inicial\". No iOS (Safari): botão Compartilhar > \"Adicionar à Tela de Início\". O aplicativo ficará disponível como um app nativo."
         },
         "app-notifications": {
-          "q": "How do I enable medication reminders?",
-          "a": "Go to Settings > Notifications and enable reminders. Make sure to allow notifications in your browser. Reminders work even when the app is closed (if installed as a PWA)."
+          "q": "Como ativo os lembretes de medicamentos?",
+          "a": "Acesse Configurações > Notificações e ative os lembretes. Permita as notificações no navegador. Os lembretes funcionam mesmo com o aplicativo fechado (se instalado como PWA)."
         },
         "app-delete-data": {
-          "q": "How do I delete all my data?",
-          "a": "Go to Settings > Delete all data. This action is irreversible. Consider exporting your data first if you want to keep it."
+          "q": "Como excluo todos os meus dados?",
+          "a": "Acesse Configurações > Excluir todos os dados. Esta ação não pode ser desfeita. Considere exportar seus dados antes, caso queira guardá-los."
         },
         "med-ranges": {
-          "q": "What do the reference ranges on the charts mean?",
-          "a": "The colored zones on the test charts represent target ranges for HRT. Values in the green zone are generally optimal. These ranges are indicative: only your doctor can interpret your results in your personal context."
+          "q": "O que significam as faixas de referência nos gráficos?",
+          "a": "As áreas coloridas nos gráficos de exames representam faixas-alvo para terapia hormonal. Os valores na área verde geralmente são considerados ideais. Essas faixas são apenas indicativas: somente seu médico pode interpretar os resultados considerando sua situação individual."
         },
         "med-tracking": {
-          "q": "Why track my medication doses?",
-          "a": "Tracking helps you: 1) not miss doses, 2) have an accurate history for your medical appointments, 3) identify patterns (recurring missed doses, side effects), 4) manage your stock and anticipate refills."
+          "q": "Por que registrar minhas doses de medicamentos?",
+          "a": "O registro ajuda a: 1) não esquecer doses, 2) manter um histórico preciso para consultas médicas, 3) identificar padrões (doses esquecidas com frequência, efeitos colaterais), 4) controlar o estoque e prever a reposição."
         },
         "med-not-advice": {
-          "q": "Does this app replace medical care?",
-          "a": "No, absolutely not. Chrysalide is a personal tracking tool, not medical advice. Always consult a healthcare professional for your medical decisions. The app helps you organize your information for appointments."
+          "q": "Este aplicativo substitui o acompanhamento médico?",
+          "a": "Não, de forma alguma. O Chrysalide é uma ferramenta de acompanhamento pessoal, não um serviço de orientação médica. Consulte sempre um profissional de saúde para tomar decisões sobre seu tratamento. O aplicativo ajuda a organizar as informações para as consultas."
         },
         "gen-name": {
-          "q": "Why the name \"Chrysalide\"?",
-          "a": "The chrysalis is the cocoon in which a caterpillar transforms into a butterfly. It's a metaphor for transition: a protected space for personal transformation. The butterfly that emerges symbolizes flourishing."
+          "q": "Por que o nome \"Chrysalide\"?",
+          "a": "A crisálida é o casulo no qual uma lagarta se transforma em borboleta. É uma metáfora para a transição: um espaço protegido para a transformação pessoal. A borboleta que emerge simboliza o florescimento."
         },
         "gen-contribute": {
-          "q": "How can I contribute to the project?",
-          "a": "Chrysalide is an open source project. You can contribute via GitHub: report bugs, suggest features, improve the code or documentation. All feedback is valuable!"
+          "q": "Como posso contribuir para o projeto?",
+          "a": "O Chrysalide é um projeto de código aberto. Você pode contribuir pelo GitHub: relatar erros, sugerir funcionalidades, melhorar o código ou a documentação. Toda contribuição é valiosa!"
         },
         "gen-support": {
-          "q": "I need urgent help, what should I do?",
-          "a": "If you're in distress, contact a helpline (see Resources > Support). In case of a medical emergency, call your local emergency number (911 in the US, 112 in Europe). You are not alone."
+          "q": "Preciso de ajuda urgente. O que devo fazer?",
+          "a": "Se você estiver em sofrimento, procure um serviço de apoio (veja Recursos > Apoio). Em caso de emergência médica, ligue para o número local de emergência (911 nos EUA, 112 na Europa). Você não está só."
         }
       }
     }
