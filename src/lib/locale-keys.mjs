@@ -2,7 +2,7 @@ import fs from 'node:fs'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 
-export const LOCALES = ['fr', 'en', 'de']
+export const LOCALES = ['fr', 'en', 'de', 'pt-BR']
 
 const messagesDir = path.join(path.dirname(fileURLToPath(import.meta.url)), '..', 'messages')
 
