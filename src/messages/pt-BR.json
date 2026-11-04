@@ -1,0 +1,1422 @@
+{
+  "metadata": {
+    "description": "Acompanhamento médico pessoal para pessoas trans"
+  },
+  "common": {
+    "save": "Salvar",
+    "cancel": "Cancelar",
+    "delete": "Excluir",
+    "loading": "Carregando...",
+    "more": "Mais",
+    "export": "Exportar",
+    "import": "Importar",
+    "exporting": "Exportando...",
+    "importing": "Importando...",
+    "version": "Versão",
+    "back": "Voltar",
+    "confirm": "Confirmar",
+    "close": "Fechar",
+    "edit": "Editar",
+    "saving": "Salvando..."
+  },
+  "nav": {
+    "home": "Início",
+    "medications": "Medicamentos",
+    "bloodtests": "Exames",
+    "more": "Mais",
+    "settings": "Configurações",
+    "evolution": "Evolução",
+    "journal": "Diário",
+    "objectives": "Objetivos",
+    "appointments": "Consultas",
+    "practitioners": "Profissionais de saúde",
+    "resources": "Recursos"
+  },
+  "settings": {
+    "title": "Configurações",
+    "subtitle": "Preferências e cópias de segurança",
+    "appearance": "Aparência",
+    "language": "Idioma",
+    "backup": {
+      "title": "Cópia de segurança dos dados",
+      "description": "Todos os seus dados ficam armazenados neste dispositivo. Exporte cópias de segurança regularmente para não perder suas informações."
+    },
+    "qrSync": {
+      "title": "Sincronização por QR Code",
+      "description": "Transfira seus dados entre dispositivos lendo QR Codes. Não é necessário ter conexão com a internet."
+    },
+    "appointments": {
+      "title": "Consultas",
+      "upcoming": "{count} agendada(s)",
+      "manage": "Gerenciar suas consultas médicas"
+    },
+    "notifications": {
+      "title": "Notificações",
+      "notSupported": "Este navegador não oferece suporte a notificações.",
+      "blocked": "Bloqueadas",
+      "blockedDescription": "As notificações foram bloqueadas. Altere as configurações do navegador para permitir notificações.",
+      "enabled": "Ativadas",
+      "enabledDescription": "Você receberá lembretes sobre seus medicamentos e consultas.",
+      "disable": "Desativar notificações",
+      "enableDescription": "Ative as notificações para receber lembretes dos seus medicamentos e consultas.",
+      "enable": "Ativar notificações"
+    },
+    "medications": {
+      "title": "Medicamentos",
+      "autoValidation": "Confirmação automática",
+      "autoValidationDescription": "Marcar automaticamente as doses como tomadas no horário programado"
+    },
+    "modules": {
+      "title": "Módulos",
+      "evolution": "Módulo de evolução",
+      "evolutionDescription": "Acompanhamento físico e fotografias",
+      "costTracking": "Acompanhamento de despesas",
+      "costTrackingDescription": "Mostrar despesas pagas nas consultas"
+    },
+    "about": {
+      "title": "Sobre",
+      "description": "Chrysalide é um aplicativo de acompanhamento médico pessoal para pessoas trans. Todos os dados permanecem no seu dispositivo, sem servidores, com máxima privacidade."
+    },
+    "dangerZone": {
+      "title": "Zona de perigo",
+      "description": "Excluir todos os dados do aplicativo. Esta ação não pode ser desfeita.",
+      "deleteAll": "Excluir todos os dados",
+      "confirmDelete": "Tem certeza de que deseja excluir todos os seus dados? Esta ação não pode ser desfeita."
+    },
+    "importError": "Erro ao importar o arquivo"
+  },
+  "medications": {
+    "siteRotation": "Alternância dos locais de aplicação",
+    "types": {
+      "estrogen": "Estrogênio",
+      "antiandrogen": "Antiandrógeno",
+      "progesteron": "Progesterona",
+      "testosterone": "Testosterona",
+      "gnrh": "Agonista de GnRH",
+      "other": "Outro"
+    },
+    "methods": {
+      "pill": "Comprimido",
+      "injection": "Injeção",
+      "patch": "Adesivo transdérmico",
+      "gel": "Gel",
+      "implant": "Implante"
+    },
+    "pillRoutes": {
+      "oral": "Oral",
+      "sublingual": "Sublingual",
+      "vaginal": "Vaginal",
+      "rectal": "Retal"
+    },
+    "injectionRoutes": {
+      "subcutaneous": "Subcutânea (SC)",
+      "intramuscular": "Intramuscular (IM)"
+    },
+    "gelZones": {
+      "forearm_left": "Antebraço esquerdo",
+      "forearm_right": "Antebraço direito",
+      "inner_thigh_left": "Face interna da coxa esquerda",
+      "inner_thigh_right": "Face interna da coxa direita",
+      "scrotal": "Escrotal"
+    },
+    "patchZones": {
+      "thigh_left": "Coxa esquerda",
+      "abdomen": "Abdômen",
+      "thigh_right": "Coxa direita",
+      "buttock": "Nádega"
+    },
+    "frequencies": {
+      "1x/jour": "1 vez/dia",
+      "2x/jour": "2 vezes/dia",
+      "3x/jour": "3 vezes/dia",
+      "1x/2jours": "A cada 2 dias",
+      "1x/3jours": "A cada 3 dias",
+      "1x/4jours": "A cada 4 dias",
+      "1x/5jours": "A cada 5 dias",
+      "1x/6jours": "A cada 6 dias",
+      "1x/10jours": "A cada 10 dias",
+      "2x/semaine": "2 vezes/semana",
+      "1x/semaine": "1 vez/semana",
+      "1x/2semaines": "A cada 2 semanas",
+      "1x/mois": "1 vez/mês",
+      "1x/3mois": "A cada 3 meses",
+      "1x/6mois": "A cada 6 meses",
+      "1x/12semaines": "A cada 12 semanas",
+      "1x/jour (soir)": "1 vez/dia (à noite)"
+    },
+    "calendar": {
+      "title": "Calendário de doses",
+      "subtitle": "Histórico das suas doses",
+      "taken": "tomada",
+      "noMeds": "Nenhum medicamento cadastrado",
+      "noDoses": "Nenhuma dose programada para este dia",
+      "stats": "Estatísticas",
+      "daysWithDoses": "Dias com doses",
+      "totalDoses": "Total de doses",
+      "daysSinceStart": "dias desde o início",
+      "validateMonth": "Confirmar o mês inteiro",
+      "validating": "Confirmando...",
+      "validateConfirm": "Confirmar todas as doses de {month}?\n\nIsso marcará automaticamente todas as doses programadas como tomadas.",
+      "validateSuccess": "Mês confirmado com sucesso!\n{count} doses adicionadas/atualizadas.",
+      "validateError": "Erro ao confirmar o mês",
+      "validateHelp": "Marca todas as doses programadas como tomadas"
+    },
+    "history": {
+      "title": "Histórico do tratamento",
+      "subtitle": "Todas as mudanças nos seus medicamentos",
+      "totalChanges": "Total de alterações",
+      "thisMonth": "Neste mês",
+      "trackedMeds": "Medicamentos acompanhados",
+      "mostCommon": "Tipo mais frequente",
+      "filters": "Filtros",
+      "allTypes": "Todos os tipos",
+      "allMeds": "Todos os medicamentos",
+      "medicationFilterPlaceholder": "Medicamento",
+      "start": "Início",
+      "end": "Fim",
+      "lastMonth": "Último mês",
+      "threeMonths": "3 meses",
+      "sixMonths": "6 meses",
+      "oneYear": "1 ano",
+      "noChanges": "Nenhuma alteração encontrada",
+      "noChangesEmpty": "Seu histórico de tratamento aparecerá aqui quando você alterar seus medicamentos.",
+      "noChangesFiltered": "Tente ajustar os filtros para ver mais resultados.",
+      "change": "alteração",
+      "changes": "alterações",
+      "found": "encontrada",
+      "foundPlural": "encontradas",
+      "noTreatments": "Nenhum tratamento para exibir."
+    },
+    "timeline": {
+      "title": "Histórico do tratamento",
+      "empty": "Nenhuma alteração registrada ainda.",
+      "emptyShort": "Sem histórico",
+      "emptyDesc": "As alterações nos seus medicamentos aparecerão aqui.",
+      "moreChanges": "+{count} alterações adicionais",
+      "more": "+{count} outras"
+    },
+    "stockUnits": {
+      "comprimés": "comprimidos",
+      "tubes": "tubos",
+      "boîtes": "caixas",
+      "patches": "adesivos",
+      "flacons": "frascos",
+      "ampoules": "ampolas",
+      "seringues": "seringas",
+      "sachets": "sachês"
+    },
+    "form": {
+      "medicationName": "Nome do medicamento",
+      "startDate": "Data de início",
+      "endDate": "Data de término (opcional)",
+      "stockUnit": "Unidade de estoque",
+      "lowStockAlert": "Alertar quando estiver abaixo de",
+      "selectPlaceholder": "Selecione...",
+      "type": "Tipo",
+      "dosage": "Dose",
+      "unit": "Unidade",
+      "method": "Via de administração",
+      "pillRoute": "Via de administração (opcional)",
+      "injectionRoute": "Tipo de injeção (opcional)",
+      "frequency": "Frequência",
+      "stock": "Estoque atual",
+      "activeLabel": "Medicamento ativo",
+      "activeDescription": "Mostrar na lista de medicamentos a tomar",
+      "notesTitle": "Observações (opcional)",
+      "notesPlaceholder": "Observações pessoais, efeitos colaterais percebidos etc."
+    },
+    "new": {
+      "title": "Novo medicamento",
+      "commonTitle": "Medicamentos comuns",
+      "commonPlaceholder": "Selecione um medicamento...",
+      "generalInfo": "Informações gerais",
+      "namePlaceholder": "Ex.: estradiol",
+      "schedulingTitle": "Programação de doses",
+      "advancedMode": "Modo avançado",
+      "advancedModeDescription": "Definir horários específicos para cada dose",
+      "advancedModeHint": "Adicione um horário para cada dose diária:",
+      "addTime": "Adicionar horário",
+      "stockTitle": "Controle de estoque (opcional)"
+    },
+    "edit": {
+      "title": "Editar medicamento",
+      "statusActive": "Ativo",
+      "statusStopped": "Interrompido"
+    },
+    "detail": {
+      "startDate": "Data de início",
+      "endDate": "Data de término",
+      "lowStockAlert": "Aviso de estoque baixo",
+      "deleteConfirm": "Excluir este medicamento?",
+      "deleteLogConfirm": "Excluir esta dose?",
+      "activeBadge": "Ativo",
+      "lowStockBadge": "Estoque baixo",
+      "frequencyTitle": "Frequência",
+      "scheduledTimesLabel": "Horários programados:",
+      "periodTitle": "Período",
+      "durationLabel": "Duração",
+      "daysSuffix": "dias",
+      "stockTitle": "Estoque",
+      "currentStockLabel": "Estoque atual",
+      "notesTitle": "Observações",
+      "gelZonesRecentTitle": "Locais de aplicação recentes",
+      "recentDosesTitle": "Doses recentes"
+    },
+    "list": {
+      "loading": "Carregando...",
+      "title": "Medicamentos",
+      "add": "Adicionar",
+      "active": "ativo",
+      "activePlural": "ativos",
+      "medicationWord": "medicamento",
+      "medicationWordPlural": "medicamentos",
+      "inactive": "inativo",
+      "inactivePlural": "inativos",
+      "inactiveBadge": "Inativo",
+      "noMedications": "Nenhum medicamento",
+      "emptyDesc": "Adicione os medicamentos da sua terapia hormonal para começar o acompanhamento",
+      "emptyCta": "Adicionar medicamento",
+      "ganttTitle": "Visualização em linha do tempo",
+      "stockLabel": "Estoque",
+      "stockLow": "Estoque baixo!",
+      "nextDose": "Próxima dose:",
+      "catchUp": "Atualizar registros",
+      "sincePrefix": "desde",
+      "taken": "Tomada",
+      "apply": "Aplicar",
+      "take": "Tomar",
+      "addPastDoseTitle": "Adicionar uma dose",
+      "addPastDoseButton": "Adicionar dose anterior",
+      "notePlaceholder": "Observações, efeitos...",
+      "autoValidated": "Confirmada automaticamente",
+      "reminderBody": "Está na hora da dose das {time}",
+      "gelZoneDialogTitle": "Local de aplicação",
+      "gelZoneDialogDesc": "Selecione o local de aplicação de",
+      "noteLabel": "Observação (opcional)",
+      "cancel": "Cancelar",
+      "save": "Salvar",
+      "pastDoseDesc": "Registrar uma dose de",
+      "dateLabel": "Data",
+      "timeLabel": "Horário",
+      "detailsLabel": "Detalhes"
+    }
+  },
+  "bloodtests": {
+    "title": "Exames",
+    "add": "Adicionar",
+    "loading": "Carregando...",
+    "hormonesFem": "Hormônios (terapia feminilizante)",
+    "hormonesMas": "Hormônios (terapia masculinizante)",
+    "hormoneTracking": "Acompanhamento hormonal",
+    "thsFem": "Terapia hormonal feminilizante",
+    "thsMas": "Terapia hormonal masculinizante",
+    "addForChart": "Adicione pelo menos um exame para visualizar a evolução",
+    "lastAnalysis": "Exame mais recente",
+    "target": "alvo",
+    "othersSuffix": "a mais",
+    "confirmDelete": "Excluir este exame?",
+    "notEnoughForChart": "Dados insuficientes para exibir o gráfico",
+    "list": {
+      "subtitle": "Acompanhe os resultados dos seus exames de sangue",
+      "safetyMarkers": "Marcadores de segurança",
+      "empty": "Nenhum exame",
+      "emptyDesc": "Adicione resultados de exames para acompanhar sua evolução hormonal",
+      "addOne": "Adicionar exame",
+      "recorded": "exame registrado",
+      "recordedPlural": "exames registrados",
+      "chartsTab": "Gráficos",
+      "historyTab": "Histórico",
+      "detailsLabel": "Detalhes"
+    },
+    "groups": {
+      "hormones": "Hormônios",
+      "blood": "Saúde sanguínea",
+      "organs": "Fígado e rins"
+    },
+    "new": {
+      "title": "Novo exame",
+      "subtitle": "Adicione os resultados de um exame de sangue",
+      "generalInfo": "Informações gerais",
+      "dateLabel": "Data do exame",
+      "labLabel": "Laboratório",
+      "labOptional": "Opcional",
+      "notesTitle": "Observações",
+      "notesPlaceholder": "Observações, contexto do exame...",
+      "cancel": "Cancelar",
+      "saving": "Salvando...",
+      "save": "Salvar",
+      "noResultAlert": "Informe pelo menos um resultado",
+      "sourcePrefix": "Fonte:"
+    },
+    "edit": {
+      "title": "Editar exame",
+      "subtitle": "Atualize as informações do exame",
+      "saving": "Salvando...",
+      "save": "Salvar alterações"
+    },
+    "detail": {
+      "loading": "Carregando...",
+      "notFound": "Exame não encontrado",
+      "deleteConfirm": "Excluir este exame?",
+      "labTitle": "Laboratório",
+      "resultsTitle": "Resultados",
+      "notesTitle": "Observações",
+      "statusNormal": "Normal",
+      "statusLow": "Baixo",
+      "statusHigh": "Alto",
+      "hormonesLabel": "Hormônios",
+      "targetLabel": "Alvo",
+      "markerSingular": "marcador registrado",
+      "markerPlural": "marcadores registrados",
+      "inTargetRange": "na faixa-alvo"
+    },
+    "markers": {
+      "estradiol": "Estradiol (E2)",
+      "testosterone": "Testosterona (T)",
+      "lh": "LH",
+      "fsh": "FSH",
+      "prolactin": "Prolactina",
+      "shbg": "SHBG",
+      "hematocrit": "Hematócrito",
+      "hemoglobin": "Hemoglobina",
+      "alt": "ALT (TGP)",
+      "ast": "AST (TGO)",
+      "creatinine": "Creatinina",
+      "potassium": "Potássio",
+      "dheas": "DHEA-S",
+      "progesterone": "Progesterona"
+    },
+    "descriptions": {
+      "estradiol": "Principal hormônio feminilizante",
+      "testosterone": "Principal hormônio masculinizante",
+      "lh": "Hormônio luteinizante",
+      "fsh": "Hormônio folículo-estimulante",
+      "prolactin": "Monitorar durante o uso de ciproterona",
+      "shbg": "Globulina ligadora de hormônios sexuais",
+      "hematocrit": "Monitorar durante o uso de testosterona",
+      "hemoglobin": "Saúde sanguínea",
+      "alt": "Função hepática",
+      "ast": "Função hepática",
+      "creatinine": "Função renal",
+      "potassium": "Importante durante o uso de espironolactona",
+      "dheas": "Precursor hormonal das glândulas suprarrenais",
+      "progesterone": "Hormônio progestágeno"
+    }
+  },
+  "dashboard": {
+    "welcome": "Boas-vindas ao seu espaço",
+    "subtitle": "Acompanhamento médico privado e acolhedor",
+    "todayDoses": "Doses de hoje",
+    "activeMeds": "Medicamentos ativos",
+    "todayMeds": "Medicamentos de hoje",
+    "viewAll": "Ver todos",
+    "noMeds": "Nenhum medicamento cadastrado",
+    "addMed": "Adicionar medicamento",
+    "upcomingAppts": "Próximas consultas",
+    "noAppts": "Nenhuma consulta agendada",
+    "addAppt": "Agendar consulta",
+    "newMed": "Novo medicamento",
+    "newTest": "Novo exame",
+    "greeting": "Olá",
+    "targetRange": "Faixa-alvo",
+    "targetRangeSourceMasculinizing": "conforme Callen-Lorde",
+    "nextDose": "Próxima dose",
+    "thisWeek": "Esta semana",
+    "stockEstimate": "Estoque estimado para mais {days} dias",
+    "mood": "Humor:",
+    "recap": {
+      "title": "Resumo",
+      "loading": "Carregando resumo...",
+      "transitionMonths": "meses de transição",
+      "transitionDays": "dias de transição",
+      "since": "Desde",
+      "streak": "Sequência de doses",
+      "toStart": "Para começar",
+      "day": "dia",
+      "days": "dias",
+      "lastLevels": "Resultados mais recentes",
+      "objectives": "Objetivos",
+      "inProgress": "em andamento",
+      "completed": "concluídos",
+      "encouragement": "Continue assim! Você consegue! 💪"
+    }
+  },
+  "journal": {
+    "title": "Diário",
+    "subtitle": "Seu espaço pessoal",
+    "newEntry": "Novo registro",
+    "searchPlaceholder": "Pesquisar no diário...",
+    "entries30d": "registros (30 dias)",
+    "avgMood": "humor médio",
+    "perWeek": "/semana",
+    "tagsUsed": "etiquetas usadas",
+    "all": "Todos",
+    "noResults": "Nenhum resultado",
+    "noEntries": "Nenhum registro",
+    "tryOtherSearch": "Tente outra pesquisa",
+    "noEntriesWithTag": "Nenhum registro com esta etiqueta",
+    "startWriting": "Comece a escrever no seu diário",
+    "result": "resultado",
+    "results": "resultados",
+    "new": {
+      "title": "Novo registro",
+      "subtitle": "Expresse-se livremente",
+      "dateLabel": "Data do registro",
+      "contentLabel": "O que está passando pela sua cabeça?",
+      "contentPlaceholder": "Escreva aqui... seus pensamentos, sentimentos, o que aconteceu hoje...",
+      "howFeeling": "Como você está se sentindo?",
+      "generalMood": "Humor geral",
+      "energyLevel": "Nível de energia",
+      "sleepQuality": "Qualidade do sono",
+      "tags": "Etiquetas",
+      "addTags": "Adicionar etiquetas...",
+      "privateEntry": "Registro privado",
+      "excludeExport": "Excluído das exportações",
+      "saving": "Salvando...",
+      "save": "Salvar"
+    },
+    "edit": {
+      "title": "Editar registro",
+      "subtitle": "Atualize seu registro",
+      "content": "Conteúdo",
+      "placeholder": "Escreva aqui..."
+    },
+    "detail": {
+      "notFound": "Registro não encontrado",
+      "notFoundDesc": "Este registro não existe ou foi excluído.",
+      "backToJournal": "Voltar ao diário",
+      "confirmDelete": "Excluir este registro?",
+      "confirmDeleteDesc": "Esta ação não pode ser desfeita. O registro será excluído permanentemente.",
+      "deleting": "Excluindo...",
+      "mood": "Humor",
+      "energy": "Energia",
+      "sleep": "Sono",
+      "tags": "Etiquetas",
+      "createdAt": "Criado em",
+      "modifiedAt": "Modificado em"
+    },
+    "moods": {
+      "1": "Muito ruim",
+      "2": "Ruim",
+      "3": "Neutro",
+      "4": "Bom",
+      "5": "Muito bom"
+    },
+    "tagCategories": {
+      "mood": "Humor",
+      "sideEffects": "Efeitos colaterais",
+      "energy": "Energia",
+      "sleep": "Sono",
+      "social": "Social",
+      "custom": "Personalizadas"
+    },
+    "tags": {
+      "heureux": "feliz",
+      "triste": "triste",
+      "anxieux": "ansiosa(o)",
+      "calme": "calma(o)",
+      "irrité": "irritada(o)",
+      "euphorique": "eufórica(o)",
+      "fatigue": "fadiga",
+      "nausées": "náusea",
+      "maux de tête": "dor de cabeça",
+      "bouffées de chaleur": "ondas de calor",
+      "sensibilité": "sensibilidade",
+      "plein d'énergie": "cheia(o) de energia",
+      "énergie normale": "energia normal",
+      "fatigué": "cansada(o)",
+      "épuisé": "exausta(o)",
+      "bien dormi": "dormi bem",
+      "sommeil moyen": "sono regular",
+      "mal dormi": "dormi mal",
+      "insomnie": "insônia",
+      "sortie": "passeio",
+      "amis": "amigos",
+      "famille": "família",
+      "isolé": "isolada(o)",
+      "coming out": "assumir-se"
+    },
+    "tagInput": {
+      "maxReached": "Limite máximo atingido",
+      "addTag": "Adicionar etiqueta...",
+      "createTag": "Criar \"{tag}\"",
+      "helpText": "Digite para buscar ou criar uma etiqueta"
+    }
+  },
+  "practitioners": {
+    "input": {
+      "recentHeader": "Profissionais recentes",
+      "searching": "Pesquisando...",
+      "resultsCount": "{count} resultado(s)",
+      "addOption": "Adicionar \"{value}\"",
+      "emptyResults": "Nenhum profissional encontrado"
+    },
+    "title": "Profissionais de saúde",
+    "add": "Adicionar",
+    "addPractitioner": "Adicionar profissional",
+    "registered": "profissional cadastrado",
+    "registeredPlural": "profissionais cadastrados",
+    "countRDV": "{count} consulta(s)",
+    "siteWeb": "Site",
+    "email": "E-mail",
+    "list": {
+      "filterByType": "Filtrar por especialidade",
+      "allTypes": "Todos os tipos",
+      "empty": "Nenhum profissional cadastrado",
+      "emptyDesc": "Adicione profissionais de saúde para encontrá-los com facilidade",
+      "emptyOfType": "Nenhum profissional deste tipo"
+    },
+    "deleteDialog": {
+      "title": "Excluir este profissional?",
+      "description": "{name} será removido(a) da sua lista. Esta ação não pode ser desfeita.",
+      "cancel": "Cancelar",
+      "confirm": "Excluir"
+    },
+    "editPage": {
+      "title": "Editar profissional",
+      "saving": "Salvando...",
+      "save": "Salvar",
+      "cancel": "Cancelar"
+    },
+    "edit": {
+      "title": "Editar profissional",
+      "basicInfo": "Informações básicas",
+      "fullName": "Nome completo *",
+      "namePlaceholder": "Dra. Nome Sobrenome",
+      "specialty": "Especialidade",
+      "transFriendly": "Acolhedor(a) para pessoas trans",
+      "transFriendlyDesc": "Este profissional é conhecido por atender pessoas trans de forma acolhedora",
+      "contact": "Contato",
+      "address": "Endereço",
+      "addressPlaceholder": "Rua da Saúde, 123, Cidade",
+      "phone": "Telefone",
+      "phonePlaceholder": "(11) 99999-9999",
+      "email": "E-mail",
+      "emailPlaceholder": "contato@profissional.com",
+      "website": "Site",
+      "websitePlaceholder": "www.profissional.com ou https://...",
+      "notes": "Observações",
+      "notesPlaceholder": "Observações pessoais sobre este profissional..."
+    },
+    "new": {
+      "title": "Novo profissional",
+      "subtitle": "Adicione um profissional à sua lista",
+      "basicInfo": "Informações básicas",
+      "fullName": "Nome completo *",
+      "namePlaceholder": "Dra. Nome Sobrenome",
+      "specialty": "Especialidade",
+      "contact": "Contato",
+      "address": "Endereço",
+      "addressPlaceholder": "Rua da Saúde, 123, Cidade",
+      "phone": "Telefone",
+      "phonePlaceholder": "(11) 99999-9999",
+      "email": "E-mail",
+      "emailPlaceholder": "contato@profissional.com",
+      "website": "Site",
+      "websitePlaceholder": "www.profissional.com ou https://...",
+      "notes": "Observações",
+      "notesPlaceholder": "Observações pessoais sobre este profissional...",
+      "transFriendly": "Acolhedor(a) para pessoas trans",
+      "transFriendlyDesc": "Este profissional é conhecido por atender pessoas trans de forma acolhedora",
+      "saving": "Salvando...",
+      "save": "Salvar"
+    }
+  },
+  "objectives": {
+    "list": {
+      "allStatuses": "Todas as situações",
+      "allCategories": "Todas as categorias",
+      "empty": "Nenhum objetivo",
+      "noResults": "Nenhum resultado",
+      "emptyDescription": "Comece criando seu primeiro objetivo de transição."
+    },
+    "title": "Meus objetivos",
+    "subtitle": "Acompanhe seus objetivos de transição",
+    "new": "Novo",
+    "globalProgress": "Progresso geral",
+    "steps": "etapas",
+    "objective": "objetivo",
+    "objectives": "objetivos",
+    "inProgress": "em andamento",
+    "newObjective": {
+      "title": "Novo objetivo",
+      "subtitle": "Defina um objetivo para sua transição",
+      "tabTemplates": "Modelos",
+      "tabCustom": "Personalizado",
+      "templateHint": "Escolha um modelo pronto para começar rapidamente",
+      "feminizingPath": "Trajetória feminilizante",
+      "masculinizingPath": "Trajetória masculinizante",
+      "commonPath": "Trajetória geral",
+      "stepsCount": "{count} etapas predefinidas"
+    },
+    "changeTypes": {
+      "started": "Iniciado",
+      "stopped": "Interrompido",
+      "paused": "Pausado",
+      "resumed": "Retomado",
+      "dosage_change": "Dose alterada",
+      "method_change": "Método alterado",
+      "frequency_change": "Frequência alterada"
+    },
+    "prescribedByPrefix": "Prescrito por",
+    "detail": {
+      "notFound": "Objetivo não encontrado",
+      "notFoundDesc": "Este objetivo não existe ou foi excluído.",
+      "backToObjectives": "Voltar aos objetivos",
+      "deleteTitle": "Excluir este objetivo?",
+      "deleteDesc": "Isso excluirá o objetivo e todas as suas etapas. Esta ação não pode ser desfeita.",
+      "deleting": "Excluindo...",
+      "progression": "Progresso",
+      "status": "Situação",
+      "statuses": {
+        "not_started": "Não iniciado",
+        "in_progress": "Em andamento",
+        "completed": "Concluído",
+        "paused": "Pausado",
+        "cancelled": "Cancelado"
+      },
+      "target": "Meta",
+      "completedOn": "Concluído em",
+      "createdOn": "Criado em",
+      "milestonesTitle": "Etapas",
+      "noMilestones": "Nenhuma etapa definida",
+      "addMilestone": "Adicionar etapa...",
+      "celebrationCompleted": "Objetivo alcançado!",
+      "celebrationAllSteps": "Todas as etapas concluídas!",
+      "celebrationDesc": "Você está avançando em direção aos seus objetivos. Parabéns!"
+    },
+    "edit": {
+      "title": "Editar objetivo",
+      "subtitle": "Atualize as informações",
+      "titleLabel": "Título *",
+      "titlePlaceholder": "Ex.: iniciar terapia hormonal",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Detalhes sobre este objetivo...",
+      "categoryAndStatus": "Categoria e situação",
+      "category": "Categoria",
+      "targetDate": "Data prevista (opcional)",
+      "selectDate": "Selecione uma data",
+      "removeDate": "Remover data",
+      "notes": "Observações",
+      "notesPlaceholder": "Observações pessoais..."
+    },
+    "categories": {
+      "medical": "Saúde",
+      "administrative": "Administrativo",
+      "social": "Social",
+      "physical": "Físico",
+      "mental": "Saúde mental"
+    },
+    "timeline": {
+      "objectiveCreated": "Objetivo criado",
+      "targetDate": "Data prevista",
+      "objectiveAchieved": "Objetivo alcançado!",
+      "doneOn": "Concluído em"
+    },
+    "templates": {
+      "ths-feminisant": {
+        "title": "Terapia hormonal feminilizante",
+        "description": "Trajetória de terapia hormonal feminilizante",
+        "duration": "5 anos",
+        "milestones": [
+          "Consulta inicial",
+          "Início da terapia hormonal",
+          "Acompanhamento de 3 meses",
+          "Acompanhamento de 6 meses",
+          "Avaliação anual"
+        ]
+      },
+      "epilation-visage": {
+        "title": "Depilação facial a laser",
+        "description": "Trajetória de depilação facial a laser",
+        "duration": "18 a 24 meses",
+        "milestones": [
+          "Consulta dermatológica",
+          "Sessões iniciais",
+          "Avaliação intermediária",
+          "Sessões finais",
+          "Manutenção"
+        ]
+      },
+      "epilation-corps": {
+        "title": "Depilação corporal a laser",
+        "description": "Trajetória de depilação corporal a laser",
+        "duration": "12 a 18 meses",
+        "milestones": [
+          "Consulta",
+          "Área 1: pernas",
+          "Área 2: braços/axilas",
+          "Área 3: virilha",
+          "Manutenção"
+        ]
+      },
+      "chirurgie-mammoplastie": {
+        "title": "Mamoplastia de aumento",
+        "description": "Trajetória de cirurgia de aumento das mamas",
+        "milestones": [
+          "Consulta com cirurgião(ã)",
+          "Exames pré-operatórios",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento pós-operatório",
+          "Resultado final"
+        ]
+      },
+      "chirurgie-vaginoplastie": {
+        "title": "Vaginoplastia",
+        "description": "Cirurgia genital feminilizante",
+        "milestones": [
+          "Consulta inicial",
+          "Avaliação psicológica",
+          "Avaliação médica",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento de longo prazo"
+        ]
+      },
+      "chirurgie-ffs": {
+        "title": "Cirurgia de feminização facial (FFS)",
+        "description": "Trajetória de cirurgia de feminização facial",
+        "milestones": [
+          "Consulta com cirurgião(ã)",
+          "Simulação 3D",
+          "Exames",
+          "Cirurgia",
+          "Recuperação",
+          "Resultado final"
+        ]
+      },
+      "ths-masculinisant": {
+        "title": "Terapia hormonal masculinizante",
+        "description": "Trajetória de terapia hormonal masculinizante",
+        "duration": "5 anos",
+        "milestones": [
+          "Consulta inicial",
+          "Início da testosterona",
+          "Acompanhamento de 3 meses",
+          "Acompanhamento de 6 meses",
+          "Avaliação anual"
+        ]
+      },
+      "chirurgie-torsoplastie": {
+        "title": "Mastectomia / Cirurgia torácica",
+        "description": "Cirurgia de masculinização do tórax",
+        "milestones": [
+          "Consulta",
+          "Exames pré-operatórios",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
+        ]
+      },
+      "chirurgie-hysterectomie": {
+        "title": "Histerectomia",
+        "description": "Cirurgia de remoção do útero",
+        "milestones": [
+          "Consulta",
+          "Exames",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
+        ]
+      },
+      "chirurgie-phalloplastie": {
+        "title": "Faloplastia",
+        "description": "Cirurgia genital masculinizante",
+        "milestones": [
+          "Consulta",
+          "Avaliação psicológica",
+          "Avaliação médica",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento de longo prazo"
+        ]
+      },
+      "chirurgie-metoidioplastie": {
+        "title": "Metoidioplastia",
+        "description": "Cirurgia genital masculinizante alternativa",
+        "milestones": [
+          "Consulta",
+          "Avaliação",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
+        ]
+      },
+      "changement-etat-civil": {
+        "title": "Reconhecimento legal de gênero",
+        "description": "Processo de reconhecimento legal de gênero",
+        "duration": "3 a 6 meses",
+        "milestones": [
+          "Reunir documentos",
+          "Protocolar solicitação",
+          "Audiência",
+          "Decisão judicial",
+          "Atualizar documentos"
+        ]
+      },
+      "changement-prenom": {
+        "title": "Alteração de nome",
+        "description": "Processo de alteração do nome civil",
+        "duration": "2 a 4 meses",
+        "milestones": [
+          "Escolher nome",
+          "Preparar documentação",
+          "Protocolar no cartório",
+          "Acompanhar processo",
+          "Atualizar certidão de nascimento"
+        ]
+      },
+      "parcours-psy": {
+        "title": "Acompanhamento psicológico",
+        "description": "Acompanhamento psicológico durante a transição",
+        "duration": "Contínuo",
+        "milestones": [
+          "Primeira consulta",
+          "Sessões regulares",
+          "Carta de acompanhamento",
+          "Avaliação anual"
+        ]
+      },
+      "coming-out-proche": {
+        "title": "Revelar sua identidade a pessoas próximas",
+        "description": "Compartilhar sua identidade com familiares e amizades",
+        "duration": "Variável",
+        "milestones": [
+          "Reflexão inicial",
+          "Primeira conversa sobre a identidade",
+          "Conversas difíceis",
+          "Rede de apoio estabelecida"
+        ]
+      },
+      "coming-out-travail": {
+        "title": "Revelar sua identidade no trabalho",
+        "description": "Lidar com sua identidade no ambiente profissional",
+        "duration": "Variável",
+        "milestones": [
+          "Preparação",
+          "Conversa com o RH",
+          "Comunicação à equipe",
+          "Atualizações administrativas"
+        ]
+      }
+    },
+    "celebration": {
+      "continue": "Continuar"
+    },
+    "actCategories": {
+      "ffs": "FFS – Cirurgia de Feminização Facial",
+      "vaginoplasty": "Vaginoplastia",
+      "hrt": "TH – Terapia Hormonal",
+      "orchiectomy": "Orquiectomia",
+      "breast_augmentation": "Mamoplastia de Aumento",
+      "voice": "Treino de Voz",
+      "hair_removal": "Depilação Definitiva",
+      "civil_status": "Alteração Legal de Nome/Gênero",
+      "other": "Outro"
+    },
+    "act": {
+      "title": "Meus procedimentos médicos",
+      "subtitle": "Acompanhe seus procedimentos de transição",
+      "empty": "Nenhum procedimento",
+      "emptyDescription": "Comece sua trajetória adicionando seu primeiro procedimento médico.",
+      "new": "Novo procedimento",
+      "newTitle": "Novo procedimento",
+      "newSubtitle": "Adicione um procedimento médico para acompanhar",
+      "editTitle": "Editar procedimento",
+      "titleLabel": "Título *",
+      "categoryLabel": "Categoria *",
+      "statusLabel": "Situação",
+      "informationLabel": "Informações",
+      "informationPlaceholder": "Informações práticas, orçamentos, contatos...",
+      "envisagedPractitioners": "Profissionais considerados",
+      "chosenPractitioners": "Profissionais escolhidos",
+      "todos": "Tarefas",
+      "addTodo": "Adicionar tarefa...",
+      "noTodos": "Nenhuma tarefa definida.",
+      "noNotes": "Nenhuma observação.",
+      "statuses": {
+        "planning": "Planejamento",
+        "in_progress": "Em andamento",
+        "done": "Concluído",
+        "cancelled": "Cancelado"
+      }
+    }
+  },
+  "onboarding": {
+    "optional": "opcional",
+    "welcome": {
+      "title": "Boas-vindas ao Chrysalide",
+      "subtitle": "Seu companheiro de transição acolhedor e confidencial",
+      "localTitle": "100% local",
+      "localDesc": "Seus dados ficam no seu dispositivo. Sem servidores ou contas.",
+      "privacyTitle": "Privacidade máxima",
+      "privacyDesc": "Suas informações médicas nunca saem do seu celular.",
+      "communityTitle": "Feito pela comunidade e para a comunidade",
+      "communityDesc": "Criado com carinho para acompanhar sua transição.",
+      "start": "Começar"
+    },
+    "profile": {
+      "title": "Seu perfil",
+      "subtitle": "Essas informações são opcionais e permanecem privadas",
+      "pronouns": "Seus pronomes (opcional)",
+      "transitionType": "Tipo de transição (opcional)",
+      "skip": "Pular",
+      "continue": "Continuar"
+    },
+    "medication": {
+      "title": "Seus medicamentos",
+      "subtitle": "Adicione seu tratamento para acompanhar doses e estoque",
+      "reminders": "Lembretes de doses",
+      "stockAlerts": "Controle de estoque com alertas",
+      "changeHistory": "Histórico de alterações do tratamento",
+      "calendar": "Calendário de doses",
+      "addMed": "Adicionar medicamento",
+      "later": "Depois",
+      "helpText": "Você também pode adicionar medicamentos mais tarde pelo menu Medicamentos"
+    }
+  },
+  "progress": {
+    "suggestedTags": {
+      "face": "rosto",
+      "body": "corpo",
+      "chest": "busto",
+      "hair": "cabelo",
+      "skin": "pele",
+      "energy": "energia",
+      "mood": "humor"
+    },
+    "title": "Evolução",
+    "entry": "registro",
+    "entries": "registros",
+    "add": "Adicionar",
+    "noEntries": "Nenhum registro",
+    "noEntriesDesc": "Documente sua evolução física com fotos e medidas",
+    "addEntry": "Adicionar registro",
+    "tabs": {
+      "timeline": "Linha do tempo",
+      "charts": "Gráficos",
+      "photos": "Fotos"
+    },
+    "measurements": {
+      "weight": "Peso",
+      "height": "Altura",
+      "chest": "Busto",
+      "underChest": "Abaixo do busto",
+      "hips": "Quadril",
+      "shoulders": "Ombros"
+    },
+    "stats": {
+      "entries": "Registros",
+      "photos": "Fotos",
+      "days": "Dias"
+    },
+    "noMeasurements": "Nenhuma medida registrada",
+    "noPhotos": "Nenhuma foto registrada",
+    "bodyMeasurements": "Medidas corporais",
+    "bodyEvolution": "Evolução corporal",
+    "measurementsLabel": "Medidas",
+    "evolution": "Evolução",
+    "chestLabel": "Busto",
+    "underChestLabel": "Abaixo do busto",
+    "waistLabel": "Cintura",
+    "hipsLabel": "Quadril",
+    "weightLabel": "Peso",
+    "new": {
+      "title": "Novo registro",
+      "subtitle": "Documente sua evolução",
+      "date": "Data",
+      "photos": "Fotos",
+      "addPhotos": "Adicionar fotos",
+      "photosLocal": "As fotos ficam armazenadas localmente no seu dispositivo",
+      "measurements": "Medidas",
+      "weightField": "Peso",
+      "heightField": "Altura",
+      "chestField": "Circunferência do busto",
+      "underChestField": "Circunferência abaixo do busto",
+      "waistField": "Circunferência da cintura",
+      "hipsField": "Circunferência do quadril",
+      "shouldersField": "Largura dos ombros",
+      "tags": "Etiquetas",
+      "customTag": "Etiqueta personalizada...",
+      "notes": "Observações",
+      "notesPlaceholder": "Mudanças percebidas, observações, sentimentos...",
+      "saving": "Salvando...",
+      "save": "Salvar"
+    },
+    "detail": {
+      "photos": "Fotos",
+      "measurements": "Medidas",
+      "tags": "Etiquetas",
+      "notes": "Observações",
+      "deleteConfirm": "Excluir este registro?"
+    },
+    "compare": {
+      "title": "Comparação",
+      "beforeAfter": "Antes / Depois",
+      "daysDiff": "de intervalo",
+      "day": "dia",
+      "days": "dias",
+      "notEnough": "Registros insuficientes",
+      "notEnoughDesc": "Adicione pelo menos 2 registros com fotos para comparar",
+      "addEntry": "Adicionar registro",
+      "before": "Antes",
+      "after": "Depois",
+      "firstToLast": "Primeiro → Último",
+      "oneMonth": "~1 mês",
+      "threeMonths": "~3 meses",
+      "measurementEvolution": "Evolução das medidas"
+    }
+  },
+  "resources": {
+    "title": "Recursos",
+    "subtitle": "Links úteis para a comunidade trans",
+    "searchPlaceholder": "Pesquisar recursos...",
+    "all": "Todos",
+    "faqCard": "Perguntas frequentes",
+    "faqCardDesc": "Ajuda sobre o aplicativo e informações gerais",
+    "resultCount": "{count} resultado",
+    "resultsCount": "{count} resultados",
+    "for": "para",
+    "noResults": "Nenhum recurso encontrado",
+    "disclaimer": "Estes recursos são disponibilizados apenas para fins informativos. O Chrysalide não possui vínculo com essas organizações e não pode garantir a precisão das informações. Para orientações médicas, procure um profissional de saúde.",
+    "categories": {
+      "community": "Comunidade",
+      "medical": "Saúde",
+      "legal": "Jurídico e administrativo",
+      "support": "Apoio",
+      "information": "Informação"
+    },
+    "items": {
+      "partagenre": {
+        "name": "Partagenre",
+        "description": "Fórum histórico da comunidade trans francófona. Debates, relatos, orientações e apoio entre pessoas da comunidade. (Recurso em francês)"
+      },
+      "wiki-trans": {
+        "name": "Wiki Trans",
+        "description": "Wiki colaborativa com informações abrangentes sobre trajetórias trans na França: saúde, burocracia e vida social. (Recurso em francês)"
+      },
+      "carte-associations": {
+        "name": "Mapa de associações trans",
+        "description": "Mapa colaborativo de associações trans na França. Encontre grupos de apoio e associações perto de você. (Recurso em francês)"
+      },
+      "fransgenre": {
+        "name": "Fransgenre",
+        "description": "Associação nacional de pessoas trans e intersexo. Recursos, apoio e defesa dos direitos de pessoas trans. (Recurso em francês)"
+      },
+      "sofect-alternatives": {
+        "name": "Caminhos independentes (fora da SOFeRT)",
+        "description": "Informações sobre processos de transição médica fora das equipes hospitalares oficiais na França. (Recurso em francês)"
+      },
+      "ths-feminisant": {
+        "name": "Guia de terapia hormonal feminilizante",
+        "description": "Informações detalhadas sobre terapia hormonal feminilizante: substâncias, doses, efeitos e acompanhamento. (Recurso em francês)"
+      },
+      "ths-masculinisant": {
+        "name": "Guia de terapia hormonal masculinizante",
+        "description": "Informações detalhadas sobre terapia hormonal masculinizante: testosterona, efeitos e acompanhamento médico. (Recurso em francês)"
+      },
+      "administrans": {
+        "name": "Administrans",
+        "description": "Guia abrangente de processos administrativos na França: alteração do marcador de gênero, nome e registro civil. (Recurso em francês)"
+      },
+      "cec-guide": {
+        "name": "Alteração do marcador de gênero no registro civil (CEC)",
+        "description": "Procedimento detalhado para alterar o marcador de gênero em registros civis na França. (Recurso em francês)"
+      },
+      "droits-travail": {
+        "name": "Direitos no trabalho",
+        "description": "Recursos sobre direitos de pessoas trans no trabalho: discriminação, transição no ambiente profissional e guias de RH. (Recurso em francês)"
+      },
+      "ligne-ecoute": {
+        "name": "Recursos para pessoas próximas",
+        "description": "Guias e recursos para familiares e amizades de pessoas trans. Apoio, orientações e informações práticas. (Recurso em francês)"
+      },
+      "trans-posez": {
+        "name": "Trans-Posez",
+        "description": "Associação de apoio entre pessoas trans. Grupos de conversa, atividades e apoio mútuo. (Recurso em francês)"
+      },
+      "transfemscience": {
+        "name": "Transfeminine Science",
+        "description": "Recurso científico em inglês sobre terapia hormonal feminilizante. Artigos detalhados, pesquisas e dados."
+      },
+      "folx-health": {
+        "name": "FOLX Health (EUA)",
+        "description": "Recursos educativos sobre saúde trans. Embora seja dos Estados Unidos, contém informações médicas úteis."
+      }
+    },
+    "faq": {
+      "title": "Perguntas frequentes",
+      "subtitle": "Perguntas frequentes",
+      "all": "Todas",
+      "helpText": "Não encontrou a resposta para sua pergunta?",
+      "consultPrefix": "Consulte os",
+      "communityResources": "recursos da comunidade",
+      "orReport": "ou relate um problema no GitHub.",
+      "categoriesLabels": {
+        "app": "Aplicativo",
+        "medical": "Saúde",
+        "general": "Geral"
+      },
+      "question": "pergunta",
+      "questions": "perguntas",
+      "items": {
+        "app-data-privacy": {
+          "q": "Meus dados estão seguros?",
+          "a": "Sim, todos os seus dados são armazenados apenas no seu dispositivo (IndexedDB). Nada é enviado a servidores. Você tem controle sobre suas informações pessoais. Lembre-se de fazer cópias de segurança regularmente pela função Exportar nas configurações."
+        },
+        "app-offline": {
+          "q": "O aplicativo funciona sem internet?",
+          "a": "Sim! O Chrysalide é um PWA (aplicativo web progressivo) que funciona totalmente offline após a instalação. Todos os recursos ficam disponíveis sem conexão com a internet."
+        },
+        "app-backup": {
+          "q": "Como faço uma cópia de segurança dos meus dados?",
+          "a": "Acesse Configurações > Exportar dados. Um arquivo JSON com seus dados será baixado. Guarde-o em um local seguro. Para restaurar, use a função Importar nas configurações."
+        },
+        "app-install": {
+          "q": "Como instalo o aplicativo no celular?",
+          "a": "No Android (Chrome): Menu ⋮ > \"Instalar aplicativo\" ou \"Adicionar à tela inicial\". No iOS (Safari): botão Compartilhar > \"Adicionar à Tela de Início\". O aplicativo ficará disponível como um app nativo."
+        },
+        "app-notifications": {
+          "q": "Como ativo os lembretes de medicamentos?",
+          "a": "Acesse Configurações > Notificações e ative os lembretes. Permita as notificações no navegador. Os lembretes funcionam mesmo com o aplicativo fechado (se instalado como PWA)."
+        },
+        "app-delete-data": {
+          "q": "Como excluo todos os meus dados?",
+          "a": "Acesse Configurações > Excluir todos os dados. Esta ação não pode ser desfeita. Considere exportar seus dados antes, caso queira guardá-los."
+        },
+        "med-ranges": {
+          "q": "O que significam as faixas de referência nos gráficos?",
+          "a": "As áreas coloridas nos gráficos de exames representam faixas-alvo para terapia hormonal. Os valores na área verde geralmente são considerados ideais. Essas faixas são apenas indicativas: somente seu médico pode interpretar os resultados considerando sua situação individual."
+        },
+        "med-tracking": {
+          "q": "Por que registrar minhas doses de medicamentos?",
+          "a": "O registro ajuda a: 1) não esquecer doses, 2) manter um histórico preciso para consultas médicas, 3) identificar padrões (doses esquecidas com frequência, efeitos colaterais), 4) controlar o estoque e prever a reposição."
+        },
+        "med-not-advice": {
+          "q": "Este aplicativo substitui o acompanhamento médico?",
+          "a": "Não, de forma alguma. O Chrysalide é uma ferramenta de acompanhamento pessoal, não um serviço de orientação médica. Consulte sempre um profissional de saúde para tomar decisões sobre seu tratamento. O aplicativo ajuda a organizar as informações para as consultas."
+        },
+        "gen-name": {
+          "q": "Por que o nome \"Chrysalide\"?",
+          "a": "A crisálida é o casulo no qual uma lagarta se transforma em borboleta. É uma metáfora para a transição: um espaço protegido para a transformação pessoal. A borboleta que emerge simboliza o florescimento."
+        },
+        "gen-contribute": {
+          "q": "Como posso contribuir para o projeto?",
+          "a": "O Chrysalide é um projeto de código aberto. Você pode contribuir pelo GitHub: relatar erros, sugerir funcionalidades, melhorar o código ou a documentação. Toda contribuição é valiosa!"
+        },
+        "gen-support": {
+          "q": "Preciso de ajuda urgente. O que devo fazer?",
+          "a": "Se você estiver em sofrimento, procure um serviço de apoio (veja Recursos > Apoio). Em caso de emergência médica, ligue para o número local de emergência (911 nos EUA, 112 na Europa). Você não está só."
+        }
+      }
+    }
+  },
+  "theme": {
+    "modeTitle": "Modo de exibição",
+    "paletteTitle": "Paleta de cores",
+    "a11yTitle": "Acessibilidade",
+    "reducedMotion": "Reduzir movimento",
+    "reducedMotionDescription": "Desativa animações para uma experiência mais tranquila",
+    "modes": {
+      "dark": {
+        "label": "Escuro",
+        "description": "Tema escuro por padrão"
+      },
+      "light": {
+        "label": "Claro",
+        "description": "Tema claro"
+      },
+      "system": {
+        "label": "Sistema",
+        "description": "Segue as preferências do sistema"
+      }
+    },
+    "schemes": {
+      "trans": {
+        "label": "Trans",
+        "description": "Cores da bandeira trans"
+      },
+      "blue": {
+        "label": "Oceano",
+        "description": "Tons de azul suaves"
+      },
+      "pink": {
+        "label": "Rosa",
+        "description": "Tons quentes de rosa"
+      },
+      "violet": {
+        "label": "Violeta",
+        "description": "Tons místicos de roxo"
+      }
+    }
+  },
+  "sync": {
+    "export": {
+      "title": "Exportar por QR Code",
+      "generating": "Gerando QR Codes...",
+      "generationError": "Falha ao gerar QR Codes",
+      "retry": "Tentar novamente",
+      "scanInOrder": "Leia cada QR Code na ordem indicada no outro dispositivo.",
+      "scanSingle": "Leia este QR Code no outro dispositivo para transferir seus dados.",
+      "session": "Sessão"
+    },
+    "import": {
+      "title": "Importar por QR Code",
+      "success": "Importação realizada com sucesso!",
+      "recordsImported": "{count} registros importados",
+      "importing": "Importando...",
+      "cameraError": "Não foi possível acessar a câmera",
+      "importError": "Erro na importação",
+      "scanInstructions": "Leia os QR Codes gerados no outro dispositivo para importar seus dados.",
+      "startScan": "Iniciar leitura",
+      "cameraRequired": "Requer acesso à câmera e um navegador compatível com a API BarcodeDetector.",
+      "progress": "Progresso"
+    }
+  },
+  "export": {
+    "button": "Exportar",
+    "asPNG": "Exportar como PNG",
+    "asPDF": "Exportar como PDF",
+    "captureError": "Erro ao capturar o gráfico",
+    "lastValues": "Resultados mais recentes",
+    "marker": "Marcador",
+    "value": "Valor",
+    "target": "Alvo",
+    "statusLabel": "Situação",
+    "statusNormal": "Normal",
+    "statusLow": "Baixo",
+    "statusHigh": "Alto",
+    "patient": "Paciente",
+    "date": "Data",
+    "atConnector": "às",
+    "generatedBy": "Gerado pelo Chrysalide - chrysalide.app",
+    "disclaimer": "Este documento é apenas informativo e não substitui a orientação médica."
+  },
+  "milestones": {
+    "title": "Título",
+    "titlePlaceholder": "Título da etapa",
+    "targetDate": "Data prevista (opcional)",
+    "selectDate": "Selecione uma data",
+    "doneOn": "Concluído em"
+  },
+  "appointments": {
+    "title": "Consultas",
+    "add": "Adicionar",
+    "calendar": "Calendário",
+    "reminder": "Lembrete",
+    "practitionerInput": {
+      "addOption": "Adicionar \"{value}\""
+    },
+    "form": {
+      "dateAndTime": "Data e horário",
+      "selectDate": "Selecione uma data",
+      "noReminder": "Sem lembrete",
+      "selectType": "Selecione um tipo",
+      "typeLabel": "Tipo de consulta",
+      "dateLabel": "Data *",
+      "timeLabel": "Horário",
+      "details": "Detalhes",
+      "practitionerLabel": "Médico(a) / profissional de saúde",
+      "practitionerPlaceholder": "Buscar ou adicionar...",
+      "locationLabel": "Local",
+      "locationPlaceholder": "Hospital, clínica...",
+      "notesLabel": "Observações",
+      "notesPlaceholder": "Informações adicionais...",
+      "costLabel": "Custo pago pela pessoa",
+      "costPlaceholder": "0.00",
+      "reminderConfig": "Configurar lembrete",
+      "reminderTitle": "Lembrete",
+      "selectDateAlert": "Selecione uma data",
+      "saveError": "Erro ao salvar",
+      "linkedObjective": "Objetivo vinculado (opcional)",
+      "noLinkedObjective": "Nenhum objetivo"
+    },
+    "new": {
+      "title": "Nova consulta",
+      "subtitle": "Adicione uma consulta médica",
+      "saving": "Salvando...",
+      "save": "Salvar consulta",
+      "reminderTitle": "Consulta: {type}",
+      "reminderMessage": "Com {doctor}"
+    },
+    "edit": {
+      "title": "Editar consulta",
+      "subtitle": "Atualize as informações da consulta",
+      "saving": "Salvando...",
+      "save": "Salvar alterações"
+    },
+    "detail": {
+      "loading": "Carregando...",
+      "deleteConfirm": "Excluir esta consulta?",
+      "pastBadge": "Consulta anterior",
+      "dateAndTime": "Data e horário",
+      "information": "Informações",
+      "practitionerLabel": "Profissional de saúde",
+      "locationLabel": "Local",
+      "reminderTitle": "Lembrete",
+      "costTitle": "Valor pago",
+      "notesTitle": "Observações"
+    },
+    "list": {
+      "loading": "Carregando...",
+      "filterByPractitioner": "Filtrar por profissional",
+      "clearFilter": "Limpar filtro",
+      "allPractitioners": "Todos os profissionais",
+      "countUpcoming": "{count} próximas",
+      "blahajLabel": "O Blåhaj diz:",
+      "blahajBeforeAmount": "Você investiu",
+      "blahajAfterAmount": "no seu bem-estar",
+      "empty": "Nenhuma consulta",
+      "emptyDesc": "Adicione suas consultas médicas para acompanhá-las",
+      "emptyCta": "Adicionar consulta",
+      "nextTitle": "Próxima consulta",
+      "detailsLabel": "Detalhes",
+      "tabUpcoming": "Próximas ({count})",
+      "tabPast": "Anteriores ({count})",
+      "noneUpcoming": "Nenhuma consulta agendada",
+      "nonePast": "Nenhuma consulta anterior",
+      "reminderBadge": "Lembrete",
+      "today": "Hoje",
+      "tomorrow": "Amanhã",
+      "inDay": "Em {days} dia",
+      "inDays": "Em {days} dias",
+      "past": "Anteriores"
+    },
+    "calendarPage": {
+      "title": "Calendário anual",
+      "subtitle": "Visão geral das suas consultas",
+      "total": "Total",
+      "upcoming": "Próximas",
+      "thisYear": "Este ano",
+      "loading": "Carregando calendário...",
+      "noneThisDay": "Nenhuma consulta neste dia",
+      "addRdv": "Adicionar consulta"
+    },
+    "types": {
+      "endocrinologist": "Endocrinologista",
+      "psychiatrist": "Psiquiatra",
+      "psychologist": "Psicóloga(o)",
+      "surgeon": "Cirurgiã(o)",
+      "general": "Clínica(o) geral",
+      "nurse": "Enfermeira(o)",
+      "speechtherapist": "Fonoaudióloga(o)",
+      "bloodtest": "Exame de sangue",
+      "laser": "Depilação a laser",
+      "electrolysis": "Eletrólise",
+      "tattoo": "Tatuadora(or)",
+      "aesthetician": "Esteticista",
+      "hairdresser": "Cabeleireira(o)",
+      "other": "Outro",
+      "laboratoire": "Laboratório"
+    },
+    "reminderTimes": {
+      "15": "15 minutos antes",
+      "30": "30 minutos antes",
+      "60": "1 hora antes",
+      "120": "2 horas antes",
+      "1440": "1 dia antes",
+      "2880": "2 dias antes"
+    }
+  }
+}

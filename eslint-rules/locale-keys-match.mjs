@@ -3,7 +3,7 @@ import { diffLocaleKeys } from '../src/lib/locale-keys.mjs'
 const localeKeysMatchRule = {
   meta: {
     type: 'problem',
-    docs: { description: 'fr/en/de locale files must share the same key set' },
+    docs: { description: 'fr/en/de/pt-BR locale files must share the same key set' },
     schema: [],
   },
   create(context) {
@@ -15,7 +15,7 @@ const localeKeysMatchRule = {
           .filter(([, keys]) => keys.length > 0)
           .map(([locale, keys]) => `${locale} missing: ${keys.join(', ')}`)
           .join(' | ')
-        context.report({ node, message: `Locale key drift between fr/en/de: ${detail}` })
+        context.report({ node, message: `Locale key drift between fr/en/de/pt-BR: ${detail}` })
       },
     }
   },

@@ -7,7 +7,7 @@
 [![PWA](https://img.shields.io/badge/PWA-Ready-5BCEFA?style=for-the-badge&logo=pwa)](<>)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 [![Local-First](https://img.shields.io/badge/Privacy-100%25_Local-F5A9B8?style=for-the-badge)](<>)
-[![i18n](https://img.shields.io/badge/Languages-FR_%7C_EN_%7C_DE-white?style=for-the-badge)](<>)
+[![i18n](https://img.shields.io/badge/Languages-FR_%7C_EN_%7C_DE_%7C_PT--BR-white?style=for-the-badge)](<>)
 
 **Personal medical tracking for trans people**
 
@@ -16,7 +16,7 @@ _Local-first web app to manage HRT, blood tests, and physical progress_
 ![Web](https://img.shields.io/badge/Web-PWA-5BCEFA?style=flat-square)
 ![Privacy](https://img.shields.io/badge/Privacy-100%25_Local-F5A9B8?style=flat-square)
 ![Dark Mode](https://img.shields.io/badge/Theme-Dark_Mode-1a1a1e?style=flat-square)
-![Languages](https://img.shields.io/badge/Languages-FR_%7C_EN_%7C_DE-white?style=flat-square)
+![Languages](https://img.shields.io/badge/Languages-FR_%7C_EN_%7C_DE_%7C_PT--BR-white?style=flat-square)
 
 </div>
 
@@ -32,7 +32,7 @@ _Local-first web app to manage HRT, blood tests, and physical progress_
 - **Practitioner Directory**: Contact info, autocomplete, history
 - **Journal**: Mood tracking, side effects, custom tags
 - **Objectives**: BLAHAJ visual progress, pre-configured templates (HRT, surgeries, legal documents)
-- **Multilingual**: available in French, English and German, auto-detected from the browser
+- **Multilingual**: available in French, English, German and Brazilian Portuguese, auto-detected from the browser
 - **100% Local**: Data stored only on your device
 - **PWA**: Installable on mobile/desktop, works offline
 - **Dark Mode**: Dark theme by default, trans flag colors

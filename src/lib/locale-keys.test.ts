@@ -10,10 +10,10 @@ describe('flattenKeys', () => {
 })
 
 describe('diffLocaleKeys', () => {
-  it('confirme que fr/en/de sont en phase', () => {
+  it('confirme que fr/en/de/pt-BR sont en phase', () => {
     expect(diffLocaleKeys()).toEqual({
       inSync: true,
-      missingByLocale: { fr: [], en: [], de: [] },
+      missingByLocale: { fr: [], en: [], de: [], 'pt-BR': [] },
     })
   })
 })
