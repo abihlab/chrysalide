@@ -1,44 +1,42 @@
-# Brazilian Portuguese translation — work in progress
+# Brazilian Portuguese (pt-BR) localization — review checklist
 
-This feature branch adds Brazilian Portuguese locale support to Chrysalide v2 (SvelteKit). It is **not yet ready for an upstream Pull Request**.
+This branch adds the full Brazilian Portuguese UI translation to Chrysalide v2 (SvelteKit).
 
-## Verified catalog status
+## Static catalog audit
 
-- Leaf entries: **1017**
-- Values adapted from the English source: **269**
-- Values still identical to English: **748** (some terms may legitimately remain identical, but all must be reviewed)
-- Missing or extra keys: **0** across all four locales
-- Integration: locale selector, browser language resolution, date-fns pt-BR locale, key parity tests and i18n tests updated
-- No medication calculations, storage schema or clinical reference ranges intentionally changed
+- English source: **1,017** leaf entries (1,001 strings and 16 milestone arrays)
+- Portuguese values different from English: **994**
+- Identical values: **23** (technical terms, proper names, numeric placeholder, or shared words such as `Gel`, `LH`, `Normal` and `Total`)
+- Missing or extra keys: **0** across French, English, German and Brazilian Portuguese
+- Dynamic placeholders: **0 mismatches**
+- Array sizes/types: **0 mismatches**
+- Newline counts in existing localized strings: **0 mismatches**
 
-## Unreviewed locale sections (matching English)
+These are static checks on repository content, **not results from a full SvelteKit build**.
 
-- `objectives`: 164
-- `appointments`: 99
-- `journal`: 86
-- `resources`: 80
-- `progress`: 76
-- `practitioners`: 65
-- `bloodtests`: 56
-- `dashboard`: 34
-- `onboarding`: 25
-- `theme`: 19
-- `sync`: 17
-- `export`: 17
-- `medications`: 5
-- `milestones`: 5
+## Changed functionality
 
-## Completion checklist
+- `src/messages/pt-BR.json`: localized messages, descriptions and milestones
+- `src/lib/i18n.svelte.ts`: language registration, browser language selection, pt-BR date-fns locale
+- `src/routes/settings/+page.svelte`: user-facing Brazilian Portuguese option
+- `src/lib/locale-keys.mjs` and checks/tests: include pt-BR among supported locales
+- Existing medical values, medications calculation logic, storage schema and reference ranges have not been edited
 
-- [ ] Translate all remaining English-facing values in `src/messages/pt-BR.json`, including arrays of milestone steps
-- [ ] Review medical terms and warnings with a pt-BR native speaker; preserve dose units, clinical meaning, and labels
-- [ ] Preserve JSON key names, template variables (e.g. `{count}`), line breaks, tags and list lengths
-- [ ] Audit date rendering, browser locale recognition and the language selector in an actual app build
-- [ ] Run `pnpm install --frozen-lockfile`, `pnpm check:locale-keys`, `pnpm check`, `pnpm test:run`, `pnpm lint`, `pnpm build`
-- [ ] Smoke-test Android Chrome PWA, desktop browsers and switching FR/EN/DE/PT-BR
-- [ ] Remove this WIP file before sending an upstream PR
+## Remaining pre-PR checks
 
-## PR plan
+- [ ] Brazilian Portuguese native review, especially medical content and procedure descriptions
+- [ ] `pnpm install --frozen-lockfile`
+- [ ] `pnpm check:locale-keys`
+- [ ] `pnpm check`
+- [ ] `pnpm test:run`
+- [ ] `pnpm lint`
+- [ ] `pnpm build`
+- [ ] Manual language switching (FR / EN / DE / PT-BR)
+- [ ] Browser automatic detection (`pt`, `pt-BR`)
+- [ ] Android Chrome PWA + desktop layout smoke test
+- [ ] Validate any locale-specific formatting (dates, currencies, and reminders)
+- [ ] Remove this file from final PR after review
 
-Fork: `abihlab/chrysalide` → source: `kushiemoon-dev/chrysalide`.
-After translation and tests, open a PR from `abihlab:feat/i18n-pt-br` to `kushiemoon-dev:main` (main is the only current published branch; check CONTRIBUTING and maintainer preferences before submission).
+## Contribution plan
+
+After review, open PR from `abihlab:feat/i18n-pt-br` to `kushiemoon-dev:main` (the source repository currently exposes `main`, although CONTRIBUTING still mentions a `dev` branch).
