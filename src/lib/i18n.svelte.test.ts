@@ -27,7 +27,14 @@ describe('i18n', () => {
     expect(localStorage.getItem('chrysalide-locale')).toBe('de')
   })
 
-  it('exposes exactly fr, en, de', () => {
-    expect(locales).toEqual(['fr', 'en', 'de'])
+  it('exposes Brazilian Portuguese alongside the existing locales', () => {
+    expect(locales).toEqual(['fr', 'en', 'de', 'pt-BR'])
+  })
+
+  it('uses Brazilian Portuguese translations and persists the choice', () => {
+    i18n.setLocale('pt-BR')
+    expect(i18n.t('common.save')).toBe('Salvar')
+    expect(i18n.t('nav.home')).toBe('Início')
+    expect(localStorage.getItem('chrysalide-locale')).toBe('pt-BR')
   })
 })
