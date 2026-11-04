@@ -27,6 +27,13 @@ describe('i18n', () => {
     expect(localStorage.getItem('chrysalide-locale')).toBe('de')
   })
 
+  it('resolves localized Brazilian Portuguese milestone arrays', () => {
+    i18n.setLocale('pt-BR')
+    const milestones = i18n.raw<string[]>('objectives.templates.ths-feminisant.milestones')
+    expect(milestones).toContain('Início da terapia hormonal')
+    expect(milestones).toHaveLength(5)
+  })
+
   it('exposes Brazilian Portuguese alongside the existing locales', () => {
     expect(locales).toEqual(['fr', 'en', 'de', 'pt-BR'])
   })
