@@ -1,21 +1,24 @@
 import { browser } from '$app/environment'
-import { fr as frDateLocale, enUS as enDateLocale, de as deDateLocale } from 'date-fns/locale'
+import { fr as frDateLocale, enUS as enDateLocale, de as deDateLocale, ptBR as ptBRDateLocale } from 'date-fns/locale'
 import type { Locale as DateFnsLocale } from 'date-fns'
 import fr from '../messages/fr.json'
 import en from '../messages/en.json'
 import de from '../messages/de.json'
+import ptBR from '../messages/pt-BR.json'
 
-export const locales = ['fr', 'en', 'de'] as const
+export const locales = ['fr', 'en', 'de', 'pt-BR'] as const
 export type Locale = (typeof locales)[number]
 export const defaultLocale: Locale = 'fr'
 
 const LOCALE_STORAGE_KEY = 'chrysalide-locale'
 
-const messagesByLocale: Record<Locale, unknown> = { fr, en, de }
+const messagesByLocale: Record<Locale, unknown> = { fr, en, de, 'pt-BR': ptBR }
 
 function resolveFromNavigator(): Locale | undefined {
   for (const lang of navigator.languages ?? [navigator.language]) {
-    const short = lang.split('-')[0]?.toLowerCase()
+    const normalized = lang.replace('_', '-').toLowerCase()
+    if (normalized === 'pt' || normalized.startsWith('pt-')) return 'pt-BR'
+    const short = normalized.split('-')[0]
     if (locales.includes(short as Locale)) return short as Locale
   }
   return undefined
@@ -72,6 +75,7 @@ const dateLocales: Record<Locale, DateFnsLocale> = {
   fr: frDateLocale,
   en: enDateLocale,
   de: deDateLocale,
+  'pt-BR': ptBRDateLocale,
 }
 
 export function getDateLocale(locale: Locale): DateFnsLocale {
