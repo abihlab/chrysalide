@@ -624,322 +624,322 @@
   },
   "objectives": {
     "list": {
-      "allStatuses": "All statuses",
-      "allCategories": "All categories",
-      "empty": "No goals",
-      "noResults": "No results",
-      "emptyDescription": "Start by creating your first transition goal."
+      "allStatuses": "Todas as situações",
+      "allCategories": "Todas as categorias",
+      "empty": "Nenhum objetivo",
+      "noResults": "Nenhum resultado",
+      "emptyDescription": "Comece criando seu primeiro objetivo de transição."
     },
-    "title": "My Goals",
-    "subtitle": "Track your transition goals",
-    "new": "New",
-    "globalProgress": "Overall progress",
-    "steps": "steps",
-    "objective": "goal",
-    "objectives": "goals",
-    "inProgress": "in progress",
+    "title": "Meus objetivos",
+    "subtitle": "Acompanhe seus objetivos de transição",
+    "new": "Novo",
+    "globalProgress": "Progresso geral",
+    "steps": "etapas",
+    "objective": "objetivo",
+    "objectives": "objetivos",
+    "inProgress": "em andamento",
     "newObjective": {
-      "title": "New goal",
-      "subtitle": "Define a goal for your transition",
-      "tabTemplates": "Templates",
-      "tabCustom": "Custom",
-      "templateHint": "Choose a pre-configured template to get started quickly",
-      "feminizingPath": "Feminizing journey",
-      "masculinizingPath": "Masculinizing journey",
-      "commonPath": "Common journey",
-      "stepsCount": "{count} predefined steps"
+      "title": "Novo objetivo",
+      "subtitle": "Defina um objetivo para sua transição",
+      "tabTemplates": "Modelos",
+      "tabCustom": "Personalizado",
+      "templateHint": "Escolha um modelo pronto para começar rapidamente",
+      "feminizingPath": "Trajetória feminilizante",
+      "masculinizingPath": "Trajetória masculinizante",
+      "commonPath": "Trajetória geral",
+      "stepsCount": "{count} etapas predefinidas"
     },
     "changeTypes": {
-      "started": "Started",
-      "stopped": "Stopped",
-      "paused": "Paused",
-      "resumed": "Resumed",
-      "dosage_change": "Dosage changed",
-      "method_change": "Method changed",
-      "frequency_change": "Frequency changed"
+      "started": "Iniciado",
+      "stopped": "Interrompido",
+      "paused": "Pausado",
+      "resumed": "Retomado",
+      "dosage_change": "Dose alterada",
+      "method_change": "Método alterado",
+      "frequency_change": "Frequência alterada"
     },
-    "prescribedByPrefix": "Prescribed by",
+    "prescribedByPrefix": "Prescrito por",
     "detail": {
-      "notFound": "Goal not found",
-      "notFoundDesc": "This goal doesn't exist or has been deleted.",
-      "backToObjectives": "Back to goals",
-      "deleteTitle": "Delete this goal?",
-      "deleteDesc": "This will delete the goal and all its steps. This action is irreversible.",
-      "deleting": "Deleting...",
-      "progression": "Progress",
-      "status": "Status",
+      "notFound": "Objetivo não encontrado",
+      "notFoundDesc": "Este objetivo não existe ou foi excluído.",
+      "backToObjectives": "Voltar aos objetivos",
+      "deleteTitle": "Excluir este objetivo?",
+      "deleteDesc": "Isso excluirá o objetivo e todas as suas etapas. Esta ação não pode ser desfeita.",
+      "deleting": "Excluindo...",
+      "progression": "Progresso",
+      "status": "Situação",
       "statuses": {
-        "not_started": "Not started",
-        "in_progress": "In progress",
-        "completed": "Completed",
-        "paused": "Paused",
-        "cancelled": "Cancelled"
+        "not_started": "Não iniciado",
+        "in_progress": "Em andamento",
+        "completed": "Concluído",
+        "paused": "Pausado",
+        "cancelled": "Cancelado"
       },
-      "target": "Target",
-      "completedOn": "Completed on",
-      "createdOn": "Created on",
-      "milestonesTitle": "Steps",
-      "noMilestones": "No steps defined",
-      "addMilestone": "Add a step...",
-      "celebrationCompleted": "Goal reached!",
-      "celebrationAllSteps": "All steps completed!",
-      "celebrationDesc": "You're making progress toward your goals, well done!"
+      "target": "Meta",
+      "completedOn": "Concluído em",
+      "createdOn": "Criado em",
+      "milestonesTitle": "Etapas",
+      "noMilestones": "Nenhuma etapa definida",
+      "addMilestone": "Adicionar etapa...",
+      "celebrationCompleted": "Objetivo alcançado!",
+      "celebrationAllSteps": "Todas as etapas concluídas!",
+      "celebrationDesc": "Você está avançando em direção aos seus objetivos. Parabéns!"
     },
     "edit": {
-      "title": "Edit goal",
-      "subtitle": "Update the information",
-      "titleLabel": "Title *",
-      "titlePlaceholder": "E.g. Start HRT",
-      "description": "Description",
-      "descriptionPlaceholder": "Details about this goal...",
-      "categoryAndStatus": "Category & status",
-      "category": "Category",
-      "targetDate": "Target date (optional)",
-      "selectDate": "Select a date",
-      "removeDate": "Remove date",
-      "notes": "Notes",
-      "notesPlaceholder": "Personal notes..."
+      "title": "Editar objetivo",
+      "subtitle": "Atualize as informações",
+      "titleLabel": "Título *",
+      "titlePlaceholder": "Ex.: iniciar terapia hormonal",
+      "description": "Descrição",
+      "descriptionPlaceholder": "Detalhes sobre este objetivo...",
+      "categoryAndStatus": "Categoria e situação",
+      "category": "Categoria",
+      "targetDate": "Data prevista (opcional)",
+      "selectDate": "Selecione uma data",
+      "removeDate": "Remover data",
+      "notes": "Observações",
+      "notesPlaceholder": "Observações pessoais..."
     },
     "categories": {
-      "medical": "Medical",
-      "administrative": "Administrative",
+      "medical": "Saúde",
+      "administrative": "Administrativo",
       "social": "Social",
-      "physical": "Physical",
-      "mental": "Mental"
+      "physical": "Físico",
+      "mental": "Saúde mental"
     },
     "timeline": {
-      "objectiveCreated": "Goal created",
-      "targetDate": "Target date",
-      "objectiveAchieved": "Goal reached!",
-      "doneOn": "Done on"
+      "objectiveCreated": "Objetivo criado",
+      "targetDate": "Data prevista",
+      "objectiveAchieved": "Objetivo alcançado!",
+      "doneOn": "Concluído em"
     },
     "templates": {
       "ths-feminisant": {
-        "title": "Feminizing HRT",
-        "description": "Female hormone therapy journey",
-        "duration": "5 years",
+        "title": "Terapia hormonal feminilizante",
+        "description": "Trajetória de terapia hormonal feminilizante",
+        "duration": "5 anos",
         "milestones": [
-          "Initial consultation",
-          "Start HRT",
-          "3-month follow-up",
-          "6-month follow-up",
-          "Annual check-up"
+          "Consulta inicial",
+          "Início da terapia hormonal",
+          "Acompanhamento de 3 meses",
+          "Acompanhamento de 6 meses",
+          "Avaliação anual"
         ]
       },
       "epilation-visage": {
-        "title": "Facial laser hair removal",
-        "description": "Facial laser hair removal journey",
-        "duration": "18-24 months",
+        "title": "Depilação facial a laser",
+        "description": "Trajetória de depilação facial a laser",
+        "duration": "18 a 24 meses",
         "milestones": [
-          "Dermatologist consultation",
-          "Initial sessions",
-          "Mid-course review",
-          "Finishing sessions",
-          "Maintenance"
+          "Consulta dermatológica",
+          "Sessões iniciais",
+          "Avaliação intermediária",
+          "Sessões finais",
+          "Manutenção"
         ]
       },
       "epilation-corps": {
-        "title": "Body laser hair removal",
-        "description": "Body laser hair removal journey",
-        "duration": "12-18 months",
+        "title": "Depilação corporal a laser",
+        "description": "Trajetória de depilação corporal a laser",
+        "duration": "12 a 18 meses",
         "milestones": [
-          "Consultation",
-          "Area 1: legs",
-          "Area 2: arms/armpits",
-          "Area 3: bikini",
-          "Maintenance"
+          "Consulta",
+          "Área 1: pernas",
+          "Área 2: braços/axilas",
+          "Área 3: virilha",
+          "Manutenção"
         ]
       },
       "chirurgie-mammoplastie": {
-        "title": "Breast augmentation",
-        "description": "Breast augmentation surgery journey",
+        "title": "Mamoplastia de aumento",
+        "description": "Trajetória de cirurgia de aumento das mamas",
         "milestones": [
-          "Surgeon consultation",
-          "Pre-op exams",
-          "Surgery",
-          "Recovery",
-          "Post-op follow-up",
-          "Final result"
+          "Consulta com cirurgião(ã)",
+          "Exames pré-operatórios",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento pós-operatório",
+          "Resultado final"
         ]
       },
       "chirurgie-vaginoplastie": {
-        "title": "Vaginoplasty",
-        "description": "Feminizing genital surgery",
+        "title": "Vaginoplastia",
+        "description": "Cirurgia genital feminilizante",
         "milestones": [
-          "Initial consultation",
-          "Psychological evaluation",
-          "Medical pathway",
-          "Surgery",
-          "Recovery",
-          "Long-term follow-up"
+          "Consulta inicial",
+          "Avaliação psicológica",
+          "Avaliação médica",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento de longo prazo"
         ]
       },
       "chirurgie-ffs": {
-        "title": "Facial feminization surgery (FFS)",
-        "description": "Facial feminization surgery journey",
+        "title": "Cirurgia de feminização facial (FFS)",
+        "description": "Trajetória de cirurgia de feminização facial",
         "milestones": [
-          "Surgeon consultation",
-          "3D simulation",
-          "Exams",
-          "Surgery",
-          "Recovery",
-          "Final result"
+          "Consulta com cirurgião(ã)",
+          "Simulação 3D",
+          "Exames",
+          "Cirurgia",
+          "Recuperação",
+          "Resultado final"
         ]
       },
       "ths-masculinisant": {
-        "title": "Masculinizing HRT",
-        "description": "Male hormone therapy journey",
-        "duration": "5 years",
+        "title": "Terapia hormonal masculinizante",
+        "description": "Trajetória de terapia hormonal masculinizante",
+        "duration": "5 anos",
         "milestones": [
-          "Initial consultation",
-          "Start testosterone",
-          "3-month follow-up",
-          "6-month follow-up",
-          "Annual check-up"
+          "Consulta inicial",
+          "Início da testosterona",
+          "Acompanhamento de 3 meses",
+          "Acompanhamento de 6 meses",
+          "Avaliação anual"
         ]
       },
       "chirurgie-torsoplastie": {
-        "title": "Mastectomy / Chest surgery",
-        "description": "Chest masculinization surgery",
+        "title": "Mastectomia / Cirurgia torácica",
+        "description": "Cirurgia de masculinização do tórax",
         "milestones": [
-          "Consultation",
-          "Pre-op exams",
-          "Surgery",
-          "Recovery",
-          "Follow-up"
+          "Consulta",
+          "Exames pré-operatórios",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
         ]
       },
       "chirurgie-hysterectomie": {
-        "title": "Hysterectomy",
-        "description": "Uterus removal surgery",
+        "title": "Histerectomia",
+        "description": "Cirurgia de remoção do útero",
         "milestones": [
-          "Consultation",
-          "Exams",
-          "Surgery",
-          "Recovery",
-          "Follow-up"
+          "Consulta",
+          "Exames",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
         ]
       },
       "chirurgie-phalloplastie": {
-        "title": "Phalloplasty",
-        "description": "Masculinizing genital surgery",
+        "title": "Faloplastia",
+        "description": "Cirurgia genital masculinizante",
         "milestones": [
-          "Consultation",
-          "Psychological evaluation",
-          "Medical pathway",
-          "Surgery",
-          "Recovery",
-          "Long-term follow-up"
+          "Consulta",
+          "Avaliação psicológica",
+          "Avaliação médica",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento de longo prazo"
         ]
       },
       "chirurgie-metoidioplastie": {
-        "title": "Metoidioplasty",
-        "description": "Alternative masculinizing genital surgery",
+        "title": "Metoidioplastia",
+        "description": "Cirurgia genital masculinizante alternativa",
         "milestones": [
-          "Consultation",
-          "Evaluation",
-          "Surgery",
-          "Recovery",
-          "Follow-up"
+          "Consulta",
+          "Avaliação",
+          "Cirurgia",
+          "Recuperação",
+          "Acompanhamento"
         ]
       },
       "changement-etat-civil": {
-        "title": "Legal gender recognition",
-        "description": "Legal gender recognition procedure",
-        "duration": "3 to 6 months",
+        "title": "Reconhecimento legal de gênero",
+        "description": "Processo de reconhecimento legal de gênero",
+        "duration": "3 a 6 meses",
         "milestones": [
-          "Gather documents",
-          "Submit application",
-          "Hearing",
-          "Judgment",
-          "Update documents"
+          "Reunir documentos",
+          "Protocolar solicitação",
+          "Audiência",
+          "Decisão judicial",
+          "Atualizar documentos"
         ]
       },
       "changement-prenom": {
-        "title": "Name change",
-        "description": "Legal name change procedure",
-        "duration": "2 to 4 months",
+        "title": "Alteração de nome",
+        "description": "Processo de alteração do nome civil",
+        "duration": "2 a 4 meses",
         "milestones": [
-          "Choose name",
-          "Prepare file",
-          "Submit to registry",
-          "Follow up",
-          "Birth certificate update"
+          "Escolher nome",
+          "Preparar documentação",
+          "Protocolar no cartório",
+          "Acompanhar processo",
+          "Atualizar certidão de nascimento"
         ]
       },
       "parcours-psy": {
-        "title": "Psychological support",
-        "description": "Psychological support during transition",
-        "duration": "Ongoing",
+        "title": "Acompanhamento psicológico",
+        "description": "Acompanhamento psicológico durante a transição",
+        "duration": "Contínuo",
         "milestones": [
-          "First appointment",
-          "Regular sessions",
-          "Support letter",
-          "Annual review"
+          "Primeira consulta",
+          "Sessões regulares",
+          "Carta de acompanhamento",
+          "Avaliação anual"
         ]
       },
       "coming-out-proche": {
-        "title": "Coming out to loved ones",
-        "description": "Sharing your identity with family and friends",
-        "duration": "Varies",
+        "title": "Revelar sua identidade a pessoas próximas",
+        "description": "Compartilhar sua identidade com familiares e amizades",
+        "duration": "Variável",
         "milestones": [
-          "Preparatory reflection",
-          "First coming out",
-          "Difficult conversations",
-          "Support established"
+          "Reflexão inicial",
+          "Primeira conversa sobre a identidade",
+          "Conversas difíceis",
+          "Rede de apoio estabelecida"
         ]
       },
       "coming-out-travail": {
-        "title": "Professional coming out",
-        "description": "Managing your identity in the workplace",
-        "duration": "Varies",
+        "title": "Revelar sua identidade no trabalho",
+        "description": "Lidar com sua identidade no ambiente profissional",
+        "duration": "Variável",
         "milestones": [
-          "Preparation",
-          "HR discussion",
-          "Team communication",
-          "Administrative updates"
+          "Preparação",
+          "Conversa com o RH",
+          "Comunicação à equipe",
+          "Atualizações administrativas"
         ]
       }
     },
     "celebration": {
-      "continue": "Continue"
+      "continue": "Continuar"
     },
     "actCategories": {
-      "ffs": "FFS – Facial Feminization Surgery",
-      "vaginoplasty": "Vaginoplasty",
-      "hrt": "HRT – Hormone Replacement Therapy",
-      "orchiectomy": "Orchiectomy",
-      "breast_augmentation": "Breast Augmentation",
-      "voice": "Voice Training",
-      "hair_removal": "Permanent Hair Removal",
-      "civil_status": "Legal Name/Gender Change",
-      "other": "Other"
+      "ffs": "FFS – Cirurgia de Feminização Facial",
+      "vaginoplasty": "Vaginoplastia",
+      "hrt": "TH – Terapia Hormonal",
+      "orchiectomy": "Orquiectomia",
+      "breast_augmentation": "Mamoplastia de Aumento",
+      "voice": "Treino de Voz",
+      "hair_removal": "Depilação Definitiva",
+      "civil_status": "Alteração Legal de Nome/Gênero",
+      "other": "Outro"
     },
     "act": {
-      "title": "My medical procedures",
-      "subtitle": "Track your transition procedures",
-      "empty": "No procedures",
-      "emptyDescription": "Start your journey by adding your first medical procedure.",
-      "new": "New procedure",
-      "newTitle": "New procedure",
-      "newSubtitle": "Add a medical procedure to track",
-      "editTitle": "Edit procedure",
-      "titleLabel": "Title *",
-      "categoryLabel": "Category *",
-      "statusLabel": "Status",
-      "informationLabel": "Information",
-      "informationPlaceholder": "Practical info, quotes, contacts...",
-      "envisagedPractitioners": "Considered practitioners",
-      "chosenPractitioners": "Chosen practitioners",
-      "todos": "To do",
-      "addTodo": "Add a task...",
-      "noTodos": "No tasks defined.",
-      "noNotes": "No notes.",
+      "title": "Meus procedimentos médicos",
+      "subtitle": "Acompanhe seus procedimentos de transição",
+      "empty": "Nenhum procedimento",
+      "emptyDescription": "Comece sua trajetória adicionando seu primeiro procedimento médico.",
+      "new": "Novo procedimento",
+      "newTitle": "Novo procedimento",
+      "newSubtitle": "Adicione um procedimento médico para acompanhar",
+      "editTitle": "Editar procedimento",
+      "titleLabel": "Título *",
+      "categoryLabel": "Categoria *",
+      "statusLabel": "Situação",
+      "informationLabel": "Informações",
+      "informationPlaceholder": "Informações práticas, orçamentos, contatos...",
+      "envisagedPractitioners": "Profissionais considerados",
+      "chosenPractitioners": "Profissionais escolhidos",
+      "todos": "Tarefas",
+      "addTodo": "Adicionar tarefa...",
+      "noTodos": "Nenhuma tarefa definida.",
+      "noNotes": "Nenhuma observação.",
       "statuses": {
-        "planning": "Planning",
-        "in_progress": "In progress",
-        "done": "Done",
-        "cancelled": "Cancelled"
+        "planning": "Planejamento",
+        "in_progress": "Em andamento",
+        "done": "Concluído",
+        "cancelled": "Cancelado"
       }
     }
   },
