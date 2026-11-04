@@ -34,6 +34,12 @@
   import QrCode from '@lucide/svelte/icons/qr-code'
 
   const MODE_ICONS = { light: Sun, dark: Moon, system: Monitor } as const
+  const LOCALE_LABELS: Record<Locale, string> = {
+    fr: 'Français',
+    en: 'English',
+    de: 'Deutsch',
+    'pt-BR': 'Português (Brasil)',
+  }
 
   let exporting = $state(false)
   let importing = $state(false)
@@ -181,9 +187,7 @@
   <div class="card">
     <select value={i18n.locale} onchange={(e) => i18n.setLocale(e.currentTarget.value as Locale)}>
       {#each locales as locale (locale)}
-        <option value={locale}
-          >{locale === 'fr' ? 'Français' : locale === 'en' ? 'English' : 'Deutsch'}</option
-        >
+        <option value={locale}>{LOCALE_LABELS[locale]}</option>
       {/each}
     </select>
   </div>
